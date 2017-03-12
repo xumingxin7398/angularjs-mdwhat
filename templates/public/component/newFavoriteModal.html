@@ -1,0 +1,36 @@
+<div class="modal-header">
+	<h4 class="modal-title">新建收藏夹</h4>
+</div>
+
+<div class="modal-body text-center">
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10">
+			<div class="login animated fadeIn" data-pageload-addclass="animated fadeIn">
+
+				<form name="favoriteForm" class="margin-bottom-0">
+					<div class="form-group">
+						<input ng-model="params.favoriteName" type="text" required="required" class="form-control input-lg" placeholder="收藏夹名称">
+					</div>
+					<div class="form-group">
+						<div class="checkbox text-left">
+							<label class="color-999">
+                                <input ng-model="params.isPrivate" type="checkbox" value="true">
+                                   仅自己可见
+                            </label>
+						</div>
+					</div>
+					<div class="login-buttons">
+						<button ng-disabled="favoriteForm.$invalid" ng-click="addFavorite()" class="btn btn-success btn-block btn-lg">提交</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-danger" type="button" ng-click="cancel()">退出</button>
+</div>

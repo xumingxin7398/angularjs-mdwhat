@@ -1,0 +1,67 @@
+<div ng-if="contentHeader.show" class="row">
+			<div class="col-xs-12 content-header-panel padding-top-15" data-scrollbar="true" data-height="100%">
+				
+					<div class="col-xs-12">
+						<span class="color-999">我的工具({{userToolList.length||0}})</span>
+					</div>
+				
+
+					<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in userToolList|orderBy: 'sortIndex':false">
+						<div class="box">
+							<a ng-href="{{site.url}}" target="_blank" class="box-thumbnail">
+
+								
+								<div class="box-img">
+									<img ng-src="{{site.favicon}}" />
+								</div>
+								<h5 title="{{site.url}}">{{site.toolName}}</h5>
+							</a>
+							<div class="box-menu btn-group">
+
+									<button title="删除我的工具" ng-click="delUserTool(site.toolId,$event)" type="button" class="btn btn-default">
+								<i class="fa fa-close">
+									</i>
+							</button>
+
+								</div>
+						</div>
+					</div>
+
+
+					<div class="col-xs-12">
+						<span class="color-999">所有工具({{toolLength-userToolList.length}})</span>
+					</div>
+
+				<div class="col-xs-12">
+					<div class="row border-after-eee" ng-repeat="sites in toolMap">
+					<div ng-if="!site.userFollowed" class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in sites|orderBy: 'sortIndex':false">
+						<div class="box">
+							<a ng-href="{{site.url}}" target="_blank" class="box-thumbnail">
+
+								
+								<div class="box-img">
+									<img ng-src="{{site.favicon}}" />
+								</div>
+								<h5>{{site.name}}</h5>
+							</a>
+							<div class="box-menu btn-group">
+
+									<button title="添加到我的工具" ng-click="addUserTool(site.id,$event)" type="button" class="btn btn-default">
+								<i class="fa fa-plus">
+									</i>
+							</button>
+
+								</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+
+			</div>
+		</div>
+		<div class="content-header-line">
+			<span class="line-circle" ng-click="contentHeader.toggle()">
+				<i class="fa fa-wrench"></i>
+			</span>
+		</div>

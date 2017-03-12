@@ -1,0 +1,59 @@
+<!-- begin #sidebar -->
+<div perfect-scrollbar id="leftSidebar" class="sidebar" 
+	on-other-false="$root.settings.layoutHome.sidebar.show"
+	opts="{wheelSpeed: 1,wheelPropagation: false,minScrollbarLength: 20}"
+	>
+	<!-- begin sidebar scrollbar -->
+	<!--<perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+  
+	</perfect-scrollbar>-->
+	<div ng-swipe-left="$root.settings.layoutHome.sidebar.toggle($event)" data-scrollbar="true" data-height="100%" >
+		<ul class="nav">
+			<li class="nav-profile">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+					<input ng-model="categoryKeyword.inputText" ng-change="categoryFilt()" type="text" class="form-control" placeholder="分类关键字">
+				</div>
+			</li>
+		</ul>
+
+		<ul class="nav navbar-stacked text-center panel-group panel-body">
+			<li  ng-if="$root.categoryList&&$root.categoryList.length==0">
+				<span class="color-999">暂无结果</span>
+				<div>
+					<a class="text-success" ui-sref="forum.index.post.all.page">
+					社区求助>>
+					</a>
+				</div>
+				
+			</li>
+			<li ui-sref-active="active" ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false">
+
+				<a ui-sref="home.index.site.common({categoryId:category.id})">
+					<i class="iconfont icon-hearts"></i> 
+					{{::category.name}}
+					<span class="badge badge-hot" ng-if="category.isHot">
+						火
+					</span>
+					<span class="badge badge-new" ng-if="category.isNew">新</span>
+					
+					<button ng-click="topCategoryAdd($index,$event)" ng-if="$index>0" class="btn btn-default btn-sm">置顶</button>
+				</a>
+			</li>
+			<li ng-if="topCategoryList&&topCategoryList.length>0" ng-click="clearTopCategoryList()">
+				<a class="btn btn-default color-999">
+					清空置顶
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+	<!-- end sidebar scrollbar -->
+</div>
+<div ng-swipe-left="$root.settings.layoutHome.sidebar.toggle($event)" class="sidebar-backdrop animated fadeIn">
+	
+</div>
+<!-- end #sidebar -->

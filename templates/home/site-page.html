@@ -1,0 +1,30 @@
+<p class="color-999" ng-if="!sites||sites.length==0">
+	暂无数据
+</p>
+<div class="row padding-vertical-15">
+
+	<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in sites">
+		<div class="box">
+			<a ng-href="{{site.url}}" target="_blank" ui-draggable="true" drag="{{site}}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail">
+
+				<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="{{site.description}}" tooltip-popup-close-delay="500">
+					<img ng-src="{{site.favicon}}" />
+				</div>
+				<h5 title="{{site.url}}">{{site.name}}</h5>
+
+			</a>
+			<div class="box-menu btn-group">
+				<button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.id,$event)" type="button" class="btn btn-default">
+												<i class="fa fa-heart">
+												</i>
+							</button>
+				<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+			</div>
+		</div>
+	</div>
+
+</div>

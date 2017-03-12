@@ -1,0 +1,20 @@
+
+		<ul class="media-list border-ddd panel-body">
+			<li class="media row" ng-if="shareParams.total>0">
+				<div class="col-xs-12 text-center">
+					<button ng-if="$root.previous" ng-click="$root.goPrevious()" class="btn btn-sm btn-link pull-left">
+						<i class="glyphicon glyphicon-chevron-left"></i>
+						返回列表
+					</button>
+					<ul ng-change="changePage()" uib-pagination total-items="shareParams.total" ng-model="shareParams.pageNum" items-per-page="shareParams.pageSize" max-size="5" class="pagination-sm no-margin" boundary-link-numbers="true" rotate="false" previous-text="上一页" next-text="下一页"></ul>
+				</div>
+			</li>
+			<div ui-view="forum-post-share-page"></div>
+			
+			<li class="media row" ng-if="shareParams.total>0">
+				<div class="col-xs-12 text-center">
+					<ul ng-change="changePage()" uib-pagination total-items="shareParams.total" ng-model="shareParams.pageNum" items-per-page="shareParams.pageSize" max-size="5" class="pagination-sm no-margin" boundary-link-numbers="true" rotate="false" previous-text="上一页" next-text="下一页"></ul>
+				</div>
+			</li>
+		</ul>
+	

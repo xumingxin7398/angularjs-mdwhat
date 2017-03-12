@@ -1,0 +1,26 @@
+<div class="row padding-top-15">
+
+	<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in favoriteSiteList">
+		<div class="box">
+			<a ng-href="{{site.url}}" target="_blank" class="box-thumbnail">
+
+				
+				<div class="box-img">
+					<img ng-src="{{site.favicon}}" />
+				</div>
+				<h5 title="{{site.url}}">{{site.siteName}}</h5>
+			</a>
+			<div class="box-menu btn-group">
+					<button title="添加到常用" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-heart">
+								</i>
+							</button>
+					<button title="删除收藏" ng-if="favorite.userId==favorite.ownerId" ng-click="delFavorite(favorite.favoriteId,site.siteId,$event)" type="button" class="btn btn-default">
+								<i class="fa fa-close">
+									</i>
+							</button>
+
+				</div>
+		</div>
+	</div>
+</div>

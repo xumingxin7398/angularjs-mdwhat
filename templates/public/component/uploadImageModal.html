@@ -1,0 +1,36 @@
+<div class="modal-header">
+	<h4 class="modal-title">图片上传</h4>
+</div>
+
+<div class="modal-body text-center">
+
+	<div class="button form-group" >
+		<div class="btn btn-primary position-relative" ngf-select="uploadFiles($files)" multiple="multiple">
+		<i class="fa fa-plus"></i>选择图片上传
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6" ng-repeat="image in previewList track by $index">
+
+			<a class="thumbnail">
+				<img ngf-thumbnail="$root.serverUrl+image" alt="{{$root.serverUrl+image}}">
+				<div class="box-menu btn-group">
+					<button title="删除图片" ng-click="delFile($index)" type="button" class="btn btn-default">
+							<i class="fa fa-close">
+								</i>
+						</button>
+
+				</div>
+			</a>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-success" type="button" ng-click="ok()">确定</button>
+	<button class="btn btn-danger" type="button" ng-click="cancel()">取消</button>
+</div>

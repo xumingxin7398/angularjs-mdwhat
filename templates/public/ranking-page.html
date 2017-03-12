@@ -1,0 +1,38 @@
+<p class="color-999" ng-if="!rankingList||rankingList.length==0">
+	暂无数据
+</p>
+<li ui-sref="public.user-zone.favorite({userId:ranking.userId})" class="media post-item row right-label" ng-repeat="ranking in rankingList track by $index">
+	<label class="ranking-label bg-red-lighter">
+			{{ranking.ranked}}
+		</label>
+	<div class="col-xs-8">
+		<div class="avatar-left">
+
+			<img ng-src="{{ranking.userIcon||'img/user-icon.jpg'}}" />
+			<h4>
+					<a ui-sref="public.user-zone.favorite({userId:ranking.userId})">
+						{{ranking.nickName||ranking.userName}}
+					</a>
+							
+						</h4>
+			<p class="text-inline">
+				{{ranking.occupation||'未知职业'}}
+
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-4 color-999">
+		<div class="row">
+
+			<div class="col-xs-12 text-inline text-right">
+				网站 {{ranking.favoriteSiteCount}}
+			</div>
+
+			<div class="col-xs-12 text-inline text-right">
+				收藏夹 {{ranking.favoriteCount}}
+			</div>
+
+		</div>
+	</div>
+
+</li>

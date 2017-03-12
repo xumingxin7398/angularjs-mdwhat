@@ -1,0 +1,30 @@
+{
+  "name": "modaowang",
+  "version": "0.0.1",
+  "description": "modaowang",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-bootstrap-scrolling-tabs": "0.0.29",
+    "angular-ckeditor": "^0.3.1",
+    "angular-drag-and-drop-lists": "^1.4.0",
+    "angular-loading-bar": "^0.9.0",
+    "angular-local-storage": "^0.5.0",
+    "angular-native-dragdrop": "^1.2.2",
+    "angular-perfect-scrollbar-2": "^1.2.4",
+    "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-bootstrap": "^2.1.0",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sidebar": "^0.2.2-retry",
+    "ckeditor": "^4.5.11",
+    "font-awesome": "^4.6.3",
+    "ng-file-upload": "^12.2.13",
+    "ng-infinite-scroll": "^1.3.0",
+    "oclazyload": "^1.0.9",
+    "textangular": "^1.5.12",
+    "ui-router-extras": "^0.1.3"
+  }
+}

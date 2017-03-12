@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ng-app="modaowang">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost data: gap: https://ssl.gstatic.com *;connect-src 'self' 'unsafe-inline' 'unsafe-eval' *;style-src 'self' 'unsafe-inline' 'unsafe-eval' http://bdimg.share.baidu.com;media-src *;script-src 'self' 'unsafe-eval' 'unsafe-inline' http://qzonestyle.gtimg.cn https://graph.qq.com/oauth2.0/me http://s1.bdstatic.com https://www.baidu.com https://hm.baidu.com http://bdimg.share.baidu.com http://ads.union.jd.com http://ads-union.jd.com http://u.x.jd.com;child-src *;">
+		<meta name="keywords" content="魔导网-发现优秀的网站">
+		<meta name="description" content="魔导网是一个集成了网站导航,网站收藏,网站问答,网站分享,共享收藏夹,随机发现网站等功能的新型导航网站.魔导网,只为发现未知的惊喜.">
+		<!--<base href="/">-->
+		<title data-ng-bind="'魔导网 - '+$state.current.data.pageTitle"></title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<!--<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+		<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.min.css" rel="stylesheet" />
+		<link href="node_modules/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" />
+
+		<link rel='stylesheet' href='node_modules/textangular/dist/textAngular.css'>
+		<!--<link rel="stylesheet" href="js/plugin/ngImgCrop/ng-img-crop.min.css">-->
+
+		<link href="css/animate.min.css" rel="stylesheet" />
+		<link href="css/metronic.css" rel="stylesheet" />
+		<link href="css/style-responsive.min.css" rel="stylesheet" />
+
+		<link href="css/iconfont/iconfont.css" rel="stylesheet" />
+
+		<link href="css/style.css" rel="stylesheet" />
+
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+		
+		<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="node_modules/ui-router-extras/release/ct-ui-router-extras.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="hidden">
+			<img src="img/logo-wx.jpg" />
+		</div>
+		<!--<script src="js/plugin/canvas-nest/canvas-nest.min.js"></script>-->
+		<div ui-view="index">
+
+		</div>
+
+		<script type="text/javascript" src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-native-dragdrop/draganddrop.min.js"></script>
+		<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+
+		<script src="node_modules/angular-perfect-scrollbar-2/dist/index.min.js"></script>
+		<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+		
+
+		<script type="text/javascript" src="js/plugin/angular-pinyin-translate/dist/angular-pinyin-translate.min.js"></script>
+		<!--<script src="js/plugin/ngImgCrop/ng-img-crop.min.js"></script>-->
+
+		<!--<script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+		<script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>-->
+
+		<script type="text/javascript" src="node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+		<script type="text/javascript" src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.min.js"></script>
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/utils/directive.js"></script>
+		<script type="text/javascript" src="js/utils/filter.js"></script>
+		<script type="text/javascript" src="js/utils/utils.js"></script>
+
+		<script type="text/javascript" src="js/service/common.js"></script>
+		<script type="text/javascript" src="js/service/interceptor.js"></script>
+		<script type="text/javascript" src="js/service/apiService.js"></script>
+		<script type="text/javascript" src="js/service/storageH.js"></script>
+
+		<script type="text/javascript" src="js/controller/componentCtrl.js"></script>
+		<script type="text/javascript" src="js/controller/gameCtrl.js"></script>
+
+		<!--<script src="js/controller/homeLayoutCtrl.js"></script>
+		<script src="js/controller/homeCtrl.js"></script>-->
+
+		<!--<script src="js/controller/forumLayoutCtrl.js"></script>
+		<script src="js/controller/forumCtrl.js"></script>-->
+
+		<!--<script src="js/controller/publicLayoutCtrl.js"></script>
+		<script src="js/controller/publicCtrl.js"></script>-->
+
+		<!--qq登录代码-->
+		<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101369901" data-redirecturi="http://mdwhat.com/public/login-redirect" charset="utf-8"></script>
+		<!--baidu数据统计代码-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?eb514b12a1a58bb5daca1ce9b6880b46";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<!--百度分享代码-->
+		<script>
+			window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "魔导网，发现优秀的网站。", "bdMini": "1", "bdMiniList": ["weixin", "sqq", "qzone", "tsina"], "bdPic": "http://mdwhat.com/img/logo-md.png", "bdStyle": "0", "bdSize": "16" }, "slide": { "type": "slide", "bdImg": "4", "bdPos": "right", "bdTop": "44" } };
+			(document.getElementsByTagName('head')[0] || body).appendChild(document.createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
+		</script>
+		<!--百度搜索代码-->
+		<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+		
+		
+		
+		<script type="text/javascript" src='node_modules/textangular/dist/textAngular-all.min.js'></script>
+		<!--<div class="row hidden-sm hidden-xs">
+			<div class="col-md-12">
+				<script type="text/javascript">var jd_union_unid="1000151850",jd_ad_ids="505:6",jd_union_pid="CJKN+YqqKxCqtvTcAxoAIPTkmcoCKgA=";var jd_width=960;var jd_height=90;var jd_union_euid="";var p="BRoEUBJYEgQWNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgyYQ8HQyNhUBVkInkuXURGVwdADV5pRAtZK1wcAREFVBNcHTISBlQaWxECGwNUK2tKRk9aZVA1FDJNQwhGaxUHGw5THF8dChcAUBhrFDIiNw%3D%3D";</script>
+				<script type="text/javascript" charset="utf-8" src="//u.x.jd.com/static/js/auto.js"></script>
+			</div>
+			
+		</div>-->
+		
+		
+	</body>
+
+</html>

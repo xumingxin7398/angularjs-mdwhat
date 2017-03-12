@@ -1,0 +1,75 @@
+<div class="modal-header">
+	<h4 class="modal-title">资料编辑</h4>
+</div>
+
+<div class="modal-body text-center">
+	<div class="row">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10">
+			<div class="login animated fadeIn" data-pageload-addclass="animated fadeIn">
+
+				<form name="profileForm" class="margin-bottom-0">
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				昵称
+			</span>
+						<input  ng-model="params.nickName" type="text" required="required"  class="form-control" placeholder="输入昵称">
+					</div>
+					<div class="form-group input-group">
+						<label class="radio-inline">
+                                            <input type="radio" ng-model="params.gender" name="gender" value="0" checked="checked">
+                                            男
+                                        </label>
+						<label class="radio-inline">
+                                            <input type="radio" ng-model="params.gender" name="gender" value="1" checked="">
+                                            女
+                                        </label>
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				年龄
+			</span>
+						<input ng-model="params.age" type="number"  class="form-control" placeholder="输入年龄">
+					</div>
+					
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				职业
+			</span>
+						<input ng-model="params.occupation" type="text"  class="form-control" placeholder="输入职业">
+					</div>
+
+					
+
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				地址
+			</span>
+						<input  ng-model="params.addressDetail" type="text"  class="form-control" placeholder="输入地址">
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				简介
+			</span>
+						<textarea  
+							ng-model="params.introduce" 
+							type="text" 
+							 
+							class="form-control" 
+							placeholder="输入简介">
+						</textarea>
+					</div>
+					<div class="login-buttons">
+						<button ng-disabled="profileForm.$invalid" ng-click="editProfile()" class="btn btn-success btn-block btn-lg">提交</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-danger" type="button" ng-click="cancel()">退出</button>
+</div>

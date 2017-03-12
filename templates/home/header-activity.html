@@ -1,0 +1,32 @@
+<div ng-if="contentHeader.show" class="row">
+			<div class="col-xs-12 content-header-panel padding-top-15" data-scrollbar="true" data-height="100%">
+				
+					<div class="col-xs-12">
+						<span class="color-999">
+							所有活动({{activityList.length||0}})
+						</span>
+					</div>
+			
+
+				
+
+					<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in activityList|orderBy:'startTime':false">
+						<div class="box">
+							<a ng-href="{{site.url}}" target="_blank" class="box-thumbnail" tooltip-placement="top" uib-tooltip="{{site.startTime|date:'MM月dd日 HH:mm'}}-{{site.endTime|date:'MM月dd日 HH:mm'}}" tooltip-popup-close-delay="500">
+
+								<div class="box-img">
+									<img ng-src="{{site.favicon}}" />
+								</div>
+								<h5 title="{{site.url}}">{{site.activityName}}</h5>
+							</a>
+						</div>
+					</div>
+			
+
+			</div>
+		</div>
+		<div class="content-header-line">
+			<span class="line-circle" ng-click="contentHeader.toggle()">
+				<i class="fa fa-gift"></i>
+			</span>
+		</div>

@@ -1,0 +1,33 @@
+<p class="color-999" ng-if="!messageList||messageList.length==0">
+	暂无数据
+</p>
+<li class="media row" ng-repeat="message in messageList|orderBy: '-createTime':false">
+	<div class="col-xs-12">
+		<div class="comment-item">
+			<a ui-sref="public.user-zone.favorite({userId:message.userId})" class="avatar-left">
+				<img ng-src="{{message.userIcon||'img/user-icon.jpg'}}" />
+
+			</a>
+			<div class="panel panel-default" ng-class="{'panel-success':message.userId==$root.modaowangUser.user.userId}">
+
+				<div class="panel-heading">
+					<i ng-if="message.id==postDetail.awardedReplyId" class="text-green fa fa-check-circle-o" ></i>
+					{{message.nickName||message.userName}}
+					<span class="font-size-12 color-999 margin-horizontal-10">
+								{{message.createTime|date:'MM-dd HH:mm:ss'}}
+							</span>
+					
+				</div>
+				<div class="panel-body">
+					<div class="text-free" ng-bind-html="message.content|trustHtml">
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</li>

@@ -1,0 +1,60 @@
+<p class="color-999" ng-if="!messageList||messageList.length==0">
+	暂无数据
+</p>
+<li  class="media row post-item" ng-repeat="message in messageList|orderBy: '-createTime':false">
+		<div class="col-xs-12">
+			<div class="avatar-left">
+				<img ui-sref="public.user-zone.favorite({userId:message.userId})" ng-src="{{message.userIcon||'img/user-icon.jpg'}}" />
+				<h4>
+							<a ui-sref="public.user-zone.favorite({userId:message.userId})">
+								
+								{{message.nickName||message.userName}}
+							</a>
+							<a class="pull-right color-999" ng-click="delMessage(message.id)" ng-href="javascript:void(0);">
+									<i class="fa fa-trash"></i>
+								</a>
+						</h4>
+				<p class="text-free">{{message.createTime|date:'yyyy-MM-dd HH:mm:ss'}}</p>
+				
+			</div>
+			<div ui-sref="forum.post-detail.page({postId:message.postId})" class="post-content-panel media-list border-ddd cursor-pointer">
+				<div ng-if="message.awarded==0" class="row">
+					<div class="col-xs-12 col-sm-6" >
+						<div class="text-free" ng-bind-html="message.content|trustHtml">
+							
+						</div>
+					</div>
+				<div  class="color-999  col-xs-12 col-sm-6">
+					@{{message.oldReplyId?'回复了评论:':'评论了帖子:'}}
+					<div class="text-free" ng-if="message.oldReplyId" ng-bind-html="message.oldReplyContent|trustHtml">
+
+					</div>
+					<div class="text-free" ng-if="!message.oldReplyId" ng-bind="message.postTitle">
+
+					</div>
+				</div>
+				
+				</div>
+				<div ng-if="message.awarded>0" class="row">
+					<div class="col-xs-12 col-sm-6" >
+						奖励你{{message.awarded}}积分
+				</div>
+					
+					<div  class="color-999 text-free col-xs-12 col-sm-6">
+					@<div class="inline" ng-bind="message.postTitle">
+
+					</div>的评论:
+					
+					<div class="text-free"  ng-bind-html="message.content|trustHtml">
+
+					</div>
+					
+				</div>
+				</div>
+				
+				
+
+			</div>
+		</div>
+
+	</li>

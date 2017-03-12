@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <!-- <script src="bundle.js" type="text/javascript" charset="utf-8"></script> -->
+        <style type="text/css" media="screen">
+            .scroll-wrapper {
+                position: relative;
+                overflow: hidden;
+                height: 300px;
+                width: 250px;
+                border: 1px solid black;
+            }
+            .ps-scrollbar-y {
+                background-color: red !important;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="../dist/index.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app='app' ng-controller='ctrl'>
+        <div>
+            Line counter: {{list.length}}
+        </div>
+
+        <perfect-scrollbar class="scroll-wrapper" opts="scrollopts">
+            <div ng-repeat="item in list">
+                {{item}}
+            </div>
+        </perfect-scrollbar>
+
+    </body>
+</html>

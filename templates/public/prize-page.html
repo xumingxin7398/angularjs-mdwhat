@@ -1,0 +1,56 @@
+<p class="color-999" ng-if="!prizeList||prizeList.length==0">
+	暂无数据
+</p>
+
+<li ng-click="toDetail(post.id)" class="media row post-item" ng-repeat="prize in prizeList|orderBy: '-createTime':false">
+
+	<div class="col-xs-12 col-sm-6">
+		<div class="avatar-left">
+
+			<img ui-sref="public.user-zone.favorite({userId:prize.userId})" ng-src="{{prize.userIcon||'img/user-icon.jpg'}}" />
+			<h4>
+							<a ui-sref="public.user-zone.favorite({userId:prize.userId})">
+								
+							{{prize.nickName||prize.userName}}
+							</a>
+							
+						</h4>
+			<p class="text-inline">
+				{{prize.createTime|date:'yyyy-MM-dd HH:mm'}}
+
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="col-xs-12 col-sm-6">
+		<div class="row color-999">
+			<div class="col-xs-6 text-inline text-left">
+				<span>{{prize.prizeType?"获得现金":"获得积分"}}</span>
+
+				<span class="text-green bold">{{prize.prizeCount}}</span>
+
+			</div>
+
+			<div class="col-xs-6 text-inline text-right">
+				<span ng-if="prize.awarded" class="color-999">
+								已兑奖
+							</span>
+				<span ng-if="!prize.awarded" class="text-primary cursor-pointer" ng-click="$root.openContentModal('editPrizeModal','',prize)">
+								<i class="glyphicon glyphicon-pencil"></i>填写信息
+							</span>
+			</div>
+		</div>
+		<div class="row color-999">
+			<div class="col-xs-6 text-inline text-left">
+				账户:{{prize.acceptAccount}}
+			</div>
+			<div class="col-xs-6 text-inline text-right">
+				备注:{{prize.mark}}
+			</div>
+		</div>
+
+	</div>
+
+</li>

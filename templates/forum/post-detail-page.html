@@ -1,0 +1,106 @@
+<li class="media row" ng-repeat="reply in replyList|orderBy: '-createTime':false">
+	<div class="col-xs-12">
+		<div class="comment-item">
+			<a ui-sref="public.user-zone.favorite({userId:reply.userId})" class="avatar-left">
+				<img ng-src="{{reply.userIcon||'img/user-icon.jpg'}}" />
+
+			</a>
+			<div class="panel panel-default" ng-class="{'panel-success':reply.id==postDetail.awardedReplyId}">
+
+				<div class="panel-heading">
+					<i ng-if="reply.id==postDetail.awardedReplyId" class="text-green fa fa-check-circle-o"></i> 
+					<a class="color-444" ui-sref="public.user-zone.favorite({userId:reply.userId})">{{reply.nickName||reply.userName}}&nbsp;&nbsp;</a>
+					<span class="text-inline font-size-12 color-999">
+								{{reply.createTime|date:'yyyy-MM-dd HH:mm:ss'}}
+							</span>
+					<a class="color-999 padding-horizontal-5" ng-if="reply.userId==$root.modaowangUser.user.userId" ng-click="delReply(reply.id)">
+						<i class="fa fa-trash"></i>
+					</a>
+					<span ng-click="getSubReply($index)" class="text-inline font-size-12 cursor-pointer color-999 pull-right" ng-if="reply.replyCount>0">
+								
+								<span ng-if="!reply.subList">更多</span>
+					<span ng-if="reply.subList&&reply.subList.length>0">收起</span>
+					<i ng-class="{'fa-caret-down':reply.subList&&reply.subList.length>0,'fa-caret-left':!reply.subList}" class="fa"></i>
+
+					</span>
+				</div>
+				<div class="panel-body">
+					<div class="text-free" ng-bind-html="reply.content|trustHtml">
+
+					</div>
+
+					<!--子回复-->
+					<div class="comment-item" ng-repeat="subReply in reply.subList|orderBy: '-createTime':false">
+						<a ui-sref="public.user-zone.favorite({userId:subReply.userId})" class="avatar-left">
+							<img ng-src="{{subReply.userIcon||'img/user-icon.jpg'}}" />
+
+						</a>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a class="color-444" ui-sref="public.user-zone.favorite({userId:reply.userId})">
+									{{subReply.nickName||subReply.userName}}&nbsp;&nbsp;
+								</a>
+								<span class="text-inline font-size-12 color-999">
+								{{subReply.createTime|date:'yyyy-MM-dd HH:mm:ss'}}
+							</span>
+							<a class="color-999 padding-horizontal-5" ng-if="subReply.userId==$root.modaowangUser.user.userId" ng-click="delReply(subReply.id)">
+						<i class="fa fa-trash"></i>
+					</a>
+							</div>
+							<div class="panel-body">
+								<div class="text-free" ng-bind-html="subReply.content|trustHtml">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--子回复-->
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="pull-right">
+								<button ng-if="postDetail.type==0&&!postDetail.awardedReplyId&&postDetail.userId==$root.modaowangUser.user.userId&&reply.userId!=$root.modaowangUser.user.userId" ng-click="replyAwarded($index)" class="btn btn-link btn-link-stable">
+									<i class="fa fa-check-circle-o" ></i> 赏
+								</button>
+
+								<button ng-class="{'btn-link-success':reply.userPraised,'btn-link-stable':!reply.userPraised}" ng-click="replyPraise($index)" class="btn btn-link">
+							<i class="fa" ng-class="{'fa-thumbs-up':reply.userPraised,'fa-thumbs-o-up':!reply.userPraised}"></i>
+							赞<span>({{reply.praiseCount||0}})</span>
+							</button>
+								<button class="btn btn-link btn-link-stable" ng-click="toggleGroup($index)">
+								<i class="fa fa-comment-o"></i>
+								回复<span>({{reply.replyCount||0}})</span>
+							</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" ng-if="openGroup==$index">
+						<div class="col-xs-12">
+
+							<div text-angular ng-model="newSubParams.content" ta-toolbar="[
+									['insertLinkC', 'insertImageC', 'insertVideoC','uploadImage']
+									]" ta-html-editor-class="editor-sm" ta-text-editor-class="editor-sm" placeholder="输入回复..." ta-resize-force-aspect-ratio="true">
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 pull-right">
+						<div class="btn-group pull-right">
+							<button ng-click="subClear()" class="btn btn-default">
+											清空
+										</button>
+							<button ng-click="subSubmit($index)" class="btn btn-default text-green">
+											提交
+										</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+</li>

@@ -1,0 +1,21 @@
+
+<ul class="nav nav-tabs">
+	<li ui-sref-active="active" >
+		<a ui-sref="public.message.post">论坛消息({{postMessageCount||0}})</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="public.message.private">私信消息({{privateMessageCount||0}})</a>
+	</li>
+	
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="message-post" ng-show="$state.includes('public.message.post')">
+			
+		</div>
+		<div ui-view="message-private" ng-show="$state.includes('public.message.private')">
+			
+		</div>
+	
+	
+</div>

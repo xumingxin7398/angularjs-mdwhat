@@ -1,0 +1,112 @@
+<div class="row">
+	<div class="col-xs-12 ">
+		<hr class="no-margin" />
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				{{userInfo.userName||userInfo.nickName}}
+				
+				<a ng-if="userId!=$root.modaowangUser.user.userId" ui-sref="public.user-chat({userId:userInfo.userId})" class="pull-right">
+					<i class="fa fa-comment"></i>私信
+				</a>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-4 col-sm-3 col-md-2">
+						<a ng-href="javascript:void(0)" class="thumbnail no-margin">
+							<img ng-src="{{userInfo.icon||'img/user-icon.jpg'}}" />
+						</a>
+					</div>
+
+					<div class="col-xs-8 col-sm-9 col-md-10 color-999">
+						<div class="row">
+							<div class="col-xs-12">
+								昵称:
+								<span class="color-666">
+									{{userInfo.nickName}}
+								</span>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								性别:
+								<span class="color-666">
+									{{userInfo.gender?'女':'男'}}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+
+								年龄:
+								<span class="color-666">
+									{{userInfo.age}}
+								</span>
+							</div>
+
+						</div>
+						
+						<div class="row">
+							<div class="col-xs-12">
+								职业:
+								<span class="color-666" >
+									{{userInfo.occupation}}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								邮箱:
+								<span class="color-666">
+									{{userInfo.email}}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								地址:
+								<span class="color-666">
+									{{userInfo.province}}
+								{{userInfo.city}}
+								{{userInfo.strict}}
+								{{userInfo.addressDetail}}
+								</span>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								简介:
+								<span class="color-666">
+									{{userInfo.introduce}}
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<ul class="nav nav-tabs">
+	<li ui-sref-active="active" >
+		<a ui-sref="public.user-zone.favorite">收藏夹({{favoriteCount||0}})</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="public.user-zone.post">帖子({{postCount['-1']||0}})</a>
+	</li>
+	
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="user-zone-favorite" ng-show="$state.includes('public.user-zone.favorite')">
+			
+		</div>
+		<div ui-view="user-zone-post" ng-show="$state.includes('public.user-zone.post')">
+			
+		</div>
+	
+	
+</div>

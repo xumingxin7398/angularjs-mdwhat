@@ -1,0 +1,2056 @@
+<!DOCTYPE html><html ng-app="modaowang" class="ng-scope"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost data: gap: https://ssl.gstatic.com *;connect-src 'self' 'unsafe-inline' 'unsafe-eval' *;style-src 'self' 'unsafe-inline' 'unsafe-eval' http://bdimg.share.baidu.com;media-src *;script-src 'self' 'unsafe-eval' 'unsafe-inline' http://qzonestyle.gtimg.cn https://graph.qq.com/oauth2.0/me https://hm.baidu.com http://bdimg.share.baidu.com;child-src *;">
+		<meta name="keywords" content="网址导航,网址收藏,网址问答,网址分享,共享收藏夹,魔导网,只为发现未知的惊喜.">
+		<meta name="description" content="魔导网是一个集成了网址导航,网址收藏,网址问答,网址分享,共享收藏夹等功能的新型导航网站.魔导网,只为发现未知的惊喜.">
+		<base href="/">
+		<title data-ng-bind="$state.current.data.pageTitle+'-魔导网'" class="ng-binding">只为发现未知的惊喜-魔导网</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+		<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.min.css" rel="stylesheet">
+		<link href="node_modules/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="node_modules/textangular/dist/textAngular.css">
+		<!--<link rel="stylesheet" href="js/plugin/ngImgCrop/ng-img-crop.min.css">-->
+
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/metronic.css" rel="stylesheet">
+		<link href="css/style-responsive.min.css" rel="stylesheet">
+
+		<link href="css/iconfont/iconfont.css" rel="stylesheet">
+
+		<link href="css/style.css" rel="stylesheet">
+
+		<script src="https://hm.baidu.com/hm.js?eb514b12a1a58bb5daca1ce9b6880b46"></script><script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="node_modules/ui-router-extras/release/ct-ui-router-extras.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+	<style type="text/css" data-href="app.css">/* perfect-scrollbar v0.6.11 */
+.ps-container {
+  -ms-touch-action: none;
+  touch-action: none;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+}
+@supports (-ms-overflow-style: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+.ps-container.ps-active-x>.ps-scrollbar-x-rail,
+.ps-container.ps-active-y>.ps-scrollbar-y-rail {
+  display: block;
+  background-color: transparent;
+}
+.ps-container.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container>.ps-scrollbar-x-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  -moz-transition: background-color .2s linear, opacity .2s linear;
+  -o-transition: background-color .2s linear, opacity .2s linear;
+  transition: background-color .2s linear, opacity .2s linear;
+  bottom: 3px;
+  height: 8px;
+}
+.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;
+  -o-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+  bottom: 0;
+  height: 8px;
+}
+.ps-container>.ps-scrollbar-y-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  -moz-transition: background-color .2s linear, opacity .2s linear;
+  -o-transition: background-color .2s linear, opacity .2s linear;
+  transition: background-color .2s linear, opacity .2s linear;
+  right: 3px;
+  width: 8px;
+}
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;
+  -o-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+  right: 0;
+  width: 8px;
+}
+.ps-container:hover.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container:hover>.ps-scrollbar-x-rail,
+.ps-container:hover>.ps-scrollbar-y-rail {
+  opacity: 0.6;
+}
+.ps-container:hover>.ps-scrollbar-x-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover>.ps-scrollbar-y-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y {
+  background-color: #999;
+}
+</style><script src="js/controller/homeCtrl.js" async=""></script><script src="js/controller/homeLayoutCtrl.js" async=""></script><script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=413333"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/slide_share.css?v=9c50d088.css"></head>
+
+	<body>
+		<!--<script src="js/plugin/canvas-nest/canvas-nest.min.js"></script>-->
+		<!-- uiView: index --><div ui-view="index" class="ng-scope" style=""><!-- begin #page-loader -->
+<!--<div id="page-loader" class="in"><span class="spinner"></span></div>-->
+<!-- end #page-loader -->
+
+<!-- begin #page-container -->
+<div id="page-container" class="page-sidebar-fixed page-header-fixed ng-scope page-sidebar-toggled" ng-class="{'page-sidebar-toggled':$root.settings.layoutHome.sidebar.show}" style="">
+
+	<!-- begin #header -->
+	<!-- ngInclude: 'templates/home/layouts/header.html' --><div ng-include="'templates/home/layouts/header.html'" class="ng-scope"><div id="header" class="header navbar navbar-default navbar-fixed-top ng-scope">
+	<!-- begin container-fluid -->
+	<div class="container-fluid">
+		<!-- begin mobile sidebar expand / collapse button -->
+		<div class="navbar-header">
+			<h1>
+				<a title="魔导网,只为发现未知的惊喜." ui-sref="home.index.site.common" class="navbar-brand" href="http://mdwhat.com/home/index/0/common">
+					<img class="logo" alt="魔导网,只为发现未知的惊喜." src="img/logo-sm.png">
+					<span class="text-default">魔导网
+					<span class="hidden-xs ng-binding" data-ng-bind="'- '+$state.current.data.pageTitle">- 只为发现未知的惊喜</span>
+					</span>
+				</a>
+			</h1>
+			
+
+			<ul class="nav navbar-nav navbar-right">
+				
+
+				
+				<li>
+					<a title="魔导网社区" ui-sref="forum.index.post.all.page" href="http://mdwhat.com/forum/index///all/">社区</a>
+				</li>
+				<li class="hidden-xs">
+					<a ui-draggable="true" title="请将我拖动到浏览器的书签栏" ng-href="javascript:(function(x,a,v,m,t){var url=location.href;if(url.charAt(url.length-1)==&quot;/&quot;){url=url.substr(0,url.length-1)}var name=x.title;var keyword=&quot;&quot;;var description=&quot;&quot;;var b=x.getElementsByTagName(&quot;meta&quot;);for(var s=0;s&lt;b.length;s++){if(b[s].name.toLowerCase()==&quot;keywords&quot;||b[s].name.toLowerCase()==&quot;keyword&quot;){keyword=b[s].content}if(b[s].name.toLowerCase()==&quot;description&quot;){description=b[s].content}}var site={url:v(url),name:name,keyword:keyword,description:description};var siteStr=JSON.stringify(site);var n=&quot;http://mdwhat.com:80/public/create-favorite-site/&quot;+v(siteStr);if(!window.open(n,&quot;modaowang&quot;,&quot;toolbar=0,resizable=1,scrollbars=yes,status=1,width=&quot;+m+&quot;,height=&quot;+t+&quot;,left=&quot;+(a.width-m)/2+&quot;,top=&quot;+(a.height-t)/2)){window.location.href=n}})(document,screen,encodeURIComponent,720,540);" draggable="true" href="http://mdwhat.com/home/index/0/common">收藏门</a>
+				</li>
+				<!-- ngIf: !$root.modaowangUser||!$root.modaowangUser.token --><li ng-if="!$root.modaowangUser||!$root.modaowangUser.token" class="ng-scope">
+					<span class="more-padding-right" ui-draggable="true" ng-click="$root.openContentModal('loginModal','')" draggable="true">登录</span>
+				</li><!-- end ngIf: !$root.modaowangUser||!$root.modaowangUser.token -->
+				<!-- ngIf: $root.modaowangUser&&$root.modaowangUser.token -->
+				
+				
+				<button type="button" class="navbar-toggle" ng-click="$root.settings.layoutHome.sidebar.toggle($event)">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				<!--<li class="dropdown" uib-dropdown>
+				<a ng-href="javascript:void(0);" uib-dropdown-toggle class="dropdown-toggle more-padding-right">
+					<i class="glyphicon">历史</i>
+
+				</a>
+				<div uib-dropdown-menu data-ng-include="'templates/home/layouts/quick-sidebar.html'" class="page-quick-sidebar-wrapper animated fadeInRight">
+				</div>
+			</li>-->
+			</ul>
+			<!-- end header navigation right -->
+			
+
+		</div>
+		<!-- end mobile sidebar expand / collapse button -->
+
+		<!-- begin header navigation right -->
+
+	</div>
+	<!-- end container-fluid -->
+</div>
+<!-- end #header --></div>
+
+	<!-- ngInclude: 'templates/home/layouts/sidebar.html' --><div ng-include="'templates/home/layouts/sidebar.html'" class="ng-scope" style=""><!-- begin #sidebar -->
+<div perfect-scrollbar="" id="leftSidebar" class="sidebar ng-scope ps-container ps-theme-default" on-other-false="$root.settings.layoutHome.sidebar.show" opts="{wheelSpeed: 1,wheelPropagation: false,minScrollbarLength: 20}" data-ps-id="ca1eca15-1c58-3bb2-cfb6-1d29aa71ee93"><div ng-transclude="">
+	<!-- begin sidebar scrollbar -->
+	<!--<perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+  
+	</perfect-scrollbar>-->
+	<div ng-swipe-left="$root.settings.layoutHome.sidebar.toggle($event)" data-scrollbar="true" data-height="100%" class="ng-scope">
+		<ul class="nav">
+			<li class="nav-profile">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+					<input ng-model="categoryKeyword.inputText" ng-change="categoryFilt()" type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="分类关键字">
+				</div>
+			</li>
+		</ul>
+
+		<ul class="nav navbar-stacked text-center panel-group panel-body">
+			<!-- ngIf: $root.categoryList&&$root.categoryList.length==0 -->
+			<!-- ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/0/common">
+					<i class="iconfont icon-hearts"></i> 
+					所有分类
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/1/common">
+					<i class="iconfont icon-hearts"></i> 
+					综合门户
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/2/common">
+					<i class="iconfont icon-hearts"></i> 
+					新闻资讯
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/3/common">
+					<i class="iconfont icon-hearts"></i> 
+					电影视频
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/4/common">
+					<i class="iconfont icon-hearts"></i> 
+					游戏玩乐
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/5/common">
+					<i class="iconfont icon-hearts"></i> 
+					网购消费
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/6/common">
+					<i class="iconfont icon-hearts"></i> 
+					软件应用
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/7/common">
+					<i class="iconfont icon-hearts"></i> 
+					IT互联网
+					<!-- ngIf: category.isHot --><span class="badge badge-hot ng-scope" ng-if="category.isHot">
+						火
+					</span><!-- end ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/8/common">
+					<i class="iconfont icon-hearts"></i> 
+					设计艺术
+					<!-- ngIf: category.isHot --><span class="badge badge-hot ng-scope" ng-if="category.isHot">
+						火
+					</span><!-- end ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/9/common">
+					<i class="iconfont icon-hearts"></i> 
+					技能学习
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/10/common">
+					<i class="iconfont icon-hearts"></i> 
+					婚恋社交
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/11/common">
+					<i class="iconfont icon-hearts"></i> 
+					动漫二次
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/12/common">
+					<i class="iconfont icon-hearts"></i> 
+					手机专区
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew --><span class="badge badge-new ng-scope" ng-if="category.isNew">新</span><!-- end ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/13/common">
+					<i class="iconfont icon-hearts"></i> 
+					国外酷站
+					<!-- ngIf: category.isHot --><span class="badge badge-hot ng-scope" ng-if="category.isHot">
+						火
+					</span><!-- end ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/14/common">
+					<i class="iconfont icon-hearts"></i> 
+					图片摄影
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/15/common">
+					<i class="iconfont icon-hearts"></i> 
+					小说阅读
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/16/common">
+					<i class="iconfont icon-hearts"></i> 
+					音乐聆听
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/17/common">
+					<i class="iconfont icon-hearts"></i> 
+					爱美潮流
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew --><span class="badge badge-new ng-scope" ng-if="category.isNew">新</span><!-- end ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/18/common">
+					<i class="iconfont icon-hearts"></i> 
+					体育舞蹈
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/19/common">
+					<i class="iconfont icon-hearts"></i> 
+					媒体流行
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/21/common">
+					<i class="iconfont icon-hearts"></i> 
+					工作求职
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/23/common">
+					<i class="iconfont icon-hearts"></i> 
+					数码电子
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/24/common">
+					<i class="iconfont icon-hearts"></i> 
+					搞笑幽默
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/25/common">
+					<i class="iconfont icon-hearts"></i> 
+					医疗养生
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/26/common">
+					<i class="iconfont icon-hearts"></i> 
+					旅游风光
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/27/common">
+					<i class="iconfont icon-hearts"></i> 
+					美食厨艺
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/28/common">
+					<i class="iconfont icon-hearts"></i> 
+					财经投资
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/29/common">
+					<i class="iconfont icon-hearts"></i> 
+					科学探索
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/30/common">
+					<i class="iconfont icon-hearts"></i> 
+					基础教育
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/31/common">
+					<i class="iconfont icon-hearts"></i> 
+					成人两性
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/32/common">
+					<i class="iconfont icon-hearts"></i> 
+					军事局势
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/33/common">
+					<i class="iconfont icon-hearts"></i> 
+					汽车相关
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/34/common">
+					<i class="iconfont icon-hearts"></i> 
+					政府官方
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/35/common">
+					<i class="iconfont icon-hearts"></i> 
+					地方网站
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false --><li ng-repeat="category in $root.categoryList | orderBy:'sortIndex':false" ng-class="{'active':category.selected}" class="ng-scope active" style="">
+
+				<a ng-href="javascript:void(0)" ng-click="selectCategory($index)" class="ng-binding" href="http://mdwhat.com/home/index/36/common">
+					<i class="iconfont icon-hearts"></i> 
+					传统文化
+					<!-- ngIf: category.isHot -->
+					<!-- ngIf: category.isNew -->
+					
+					<!-- ngIf: $index>0 --><button ng-click="topCategoryAdd($index,$event)" ng-if="$index&gt;0" class="btn btn-default btn-sm ng-scope">置顶</button><!-- end ngIf: $index>0 -->
+				</a>
+			</li><!-- end ngRepeat: category in $root.categoryList | orderBy:'sortIndex':false -->
+			<!-- ngIf: topCategoryList&&topCategoryList.length>0 -->
+
+		</ul>
+
+	</div>
+	<!-- end sidebar scrollbar -->
+</div><div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+<div ng-swipe-left="$root.settings.layoutHome.sidebar.toggle($event)" class="sidebar-backdrop animated fadeIn ng-scope">
+	
+</div>
+<!-- end #sidebar --></div>
+
+	<!-- begin #content -->
+	<div id="content" class="content" on-scroll-true="$root.settings.layoutHome.headerSearch.show">
+		
+		
+		
+		
+		
+		
+		<!-- uiView: home-content --><div ui-view="home-content" class="ng-scope"><script type="text/ng-template" id="rankingPopover.html" class="ng-scope">
+	<div class="row padding-horizontal-10 text-center">
+		<div class="col-xs-6 font-size-12 color-999 no-padding text-left">
+			<span>用户</span>
+		</div>
+		<div class="col-xs-6 font-size-12 color-999 no-padding text-right">
+			<span>收藏</span>
+		</div>
+
+	</div>
+	<div class="row padding-horizontal-10 text-center" ng-repeat="ranking in rankingList | orderBy:'ranked':false">
+		<div class="col-xs-8 no-padding text-inline text-left">
+			<a target="_blank" ui-sref="public.user-zone.favorite({userId:ranking.userId})">
+				{{ranking.nickName||ranking.userName}}
+			</a>
+		</div>
+		<div class="col-xs-4 no-padding text-right">
+			<span>{{ranking.favoriteSiteCount}}</span>
+		</div>
+	</div>
+	<div class="row text-center">
+		<a class="color-999 font-size-12" ui-sref="public.ranking.page">
+			查看更多
+		</a>
+	</div>
+</script>
+
+<script type="text/ng-template" id="introduceTooltip.html" class="ng-scope">
+	<a target="_blank" ui-sref="public.introduce" class='padding-vertical-10'>小魔导为您指路~</a>
+</script>
+
+<div class="row ng-scope">
+	
+
+	<div class="col-sm-8 col-xs-12">
+		<div class="input-group">
+			<span class="input-group-btn ">
+        					<button ng-click="search.bdSearch()" class="btn btn-default " type="button ">
+        					百度一下
+        					</button>
+     			 		</span>
+			<input type="text" ng-enter="search.toSearch()" ng-model="search.keyword" focus-me-pc="" uib-dropdown-input="" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="输入关键字...">
+			<!--<div uib-dropdown keyboard-nav style="height: 34px;">
+				<input type="text" ng-enter="search.toSearch()" ng-model="search.keyword" uib-dropdown-input class="form-control" placeholder="输入关键字..." />
+				<ul class="dropdown-menu" uib-dropdown-menu>
+					<li>
+						<a ng-href="javascript:void(0)">百度(100)</a>
+					</li>
+					<li>
+						<a ng-href="javascript:void(0)">搜狗(50)</a>
+					</li>
+					<li>
+						<a ng-href="javascript:void(0)">知乎(20)</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li>
+						<a ng-href="javascript:void(0)">维基(1000)推荐</a>
+					</li>
+				</ul>
+			</div>-->
+
+			<span class="input-group-btn ">
+        					<button ng-click="search.toSearch()" class="btn btn-primary " type="button ">
+        					搜本站
+        					</button>
+     			 		</span>
+
+		</div>
+	</div>
+	<div class="col-sm-2 hidden-xs">
+		<div class="input-group">
+			<div class="input-group-btn text-center">
+				<button class="btn btn-link color-444" type="button" ng-click="openGame()">
+							<i class="iconfont icon-magicwand"></i>
+							黑魔法
+							</button>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-sm-2 hidden-xs">
+
+		<div class="magic-pet" uib-popover-template="'rankingPopover.html'" popover-title="收藏达人" popover-placement="bottom" popover-trigger="'outsideClick'" tooltip-placement="left-bottom" uib-tooltip-template="'introduceTooltip.html'" tooltip-is-open="true" tooltip-trigger="click" tooltip-popup-close-delay="1500">
+			<img src="img/xiaomodao.png">
+		</div><div uib-tooltip-template-popup="" uib-title="" content-exp="contentExp()" origin-scope="origScope" class="tooltip ng-scope ng-isolate-scope left fade in left-bottom" tooltip-animation-class="fade" uib-tooltip-classes="" ng-class="{ in: isOpen }" style="top: 28px; left: 25px;"><div class="tooltip-arrow" style="bottom: 6px; right: 0px;"></div>
+<div class="tooltip-inner" uib-tooltip-template-transclude="contentExp()" tooltip-template-transclude-scope="originScope()"><a target="_blank" ui-sref="public.introduce" class="padding-vertical-10 ng-scope" href="http://mdwhat.com/public/introduce">小魔导为您指路~</a></div>
+</div>
+
+	</div>
+</div>
+<hr class="margin-vertical-15 ng-scope">
+<div class="row hidden-sm hidden-md hidden-lg panel-group ng-scope">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="input-group">
+					<div class="input-group-btn text-center">
+						<button class="btn btn-link color-444" type="button" ng-click="openGame()">
+							<i class="iconfont icon-magicwand"></i>
+							黑魔法
+							</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="magic-pet" uib-popover-template="'rankingPopover.html'" popover-title="收藏达人" popover-placement="bottom" popover-trigger="'outsideClick'" tooltip-placement="left-bottom" uib-tooltip-template="'introduceTooltip.html'" tooltip-is-open="true" tooltip-trigger="click" tooltip-popup-close-delay="1500">
+					<img src="img/xiaomodao.png">
+				</div><div uib-tooltip-template-popup="" uib-title="" content-exp="contentExp()" origin-scope="origScope" class="tooltip ng-scope ng-isolate-scope left fade in left-bottom" tooltip-animation-class="fade" uib-tooltip-classes="" ng-class="{ in: isOpen }" style="top: 0px; left: 0px;"><div class="tooltip-arrow" style="bottom: 6px; right: 0px;"></div>
+<div class="tooltip-inner" uib-tooltip-template-transclude="contentExp()" tooltip-template-transclude-scope="originScope()"><a target="_blank" ui-sref="public.introduce" class="padding-vertical-10 ng-scope" href="http://mdwhat.com/public/introduce">小魔导为您指路~</a></div>
+</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- uiView: home-content-site --><div ui-view="home-content-site" class="ng-scope" style="">
+<ul class="nav ng-scope">
+	<li ui-sref-active="active" class="content-header-menu active">
+		<a ui-sref="home.index.site.common" href="http://mdwhat.com/home/index/0/common">常用</a>
+	</li>
+	<li ui-sref-active="active" class="content-header-menu">
+		<a ui-sref="home.index.site.favorite.detail" href="http://mdwhat.com/home/index/0/favorite/">收藏</a>
+	</li>
+	<li ui-sref-active="active" class="content-header-menu">
+		<a ui-sref="home.index.site.tool" href="http://mdwhat.com/home/index/0/tool">工具</a>
+	</li>
+	<li ui-sref-active="active" class="content-header-menu">
+		<a ui-sref="home.index.site.activity" href="http://mdwhat.com/home/index/0/activity">活动</a>
+	</li>
+</ul>
+<div class="tab-default tab-content ng-scope">
+	
+	<!-- uiView: home-common --><div ui-view="home-common" ng-show="$state.includes('home.index.site.common')" class="ng-scope">
+<!-- ngIf: contentHeader.show --><div ng-if="contentHeader.show" drop-channel="site" ui-on-drop="onCommonDrop($data,$event)" class="row content-header-panel ng-scope">
+	<div class="col-xs-12 padding-vertical-5">
+		<div class="col-xs-5">
+			<button ng-click="$root.openContentModal('newCommonModal','')" class="btn btn-link btn-link-stable no-padding-horizontal">
+							<i class="iconfont"></i>
+							<i class="fa fa-plus-circle"></i>
+							添加网站
+						</button>
+		</div>
+		<!--<div class="col-xs-7">
+			<a ui-sref="public.common" class="btn btn-link btn-link-success pull-right">
+				<i class="glyphicon glyphicon-resize-full"></i>
+			</a>
+			<button ng-click="$root.openContentModal('commonModal')" type="button" class="btn btn-link btn-link-success pull-right no-padding-horizontal">
+							<i class="iconfont icon-tuijian"></i>
+							推荐常用
+						</button>
+
+		</div>-->
+	</div>
+	<div class="col-xs-12" dnd-list="commonList" dnd-horizontal-list="true" dnd-inserted="onCommonDndInserted(event, index, item, external)">
+
+		<!-- ngRepeat: site in commonList | orderBy:'sortIndex':false -->
+	</div>
+
+</div><!-- end ngIf: contentHeader.show -->
+<div class="content-header-line ng-scope">
+	<span class="line-circle" ng-click="contentHeader.toggle()">
+				<i class="fa fa-heart"></i>
+			</span>
+</div></div>
+		<!-- uiView: home-favorite --><div ui-view="home-favorite" ng-show="$state.includes('home.index.site.favorite.detail')" class="ng-scope ng-hide">
+			
+		</div>
+	<!-- uiView: home-tool --><div ui-view="home-tool" ng-show="$state.includes('home.index.site.tool')" class="ng-scope ng-hide">
+			
+		</div>
+	<!-- uiView: home-activity --><div ui-view="home-activity" ng-show="$state.includes('home.index.site.activity')" class="ng-scope ng-hide">
+			
+		</div>
+</div>
+
+
+<div class="row ng-scope ng-isolate-scope" infinite-scroll="loadMoreSite()" infinite-scroll-disabled="loadMore.loading||!sitesMap" infinite-scroll-immediate-check="false" infinite-scroll-use-document-bottom="false">
+	
+	<div class="col-xs-12 box-container padding-top-15">
+		
+		<!-- ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false --><div class="row ng-scope" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false" style="">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999 ng-binding">门户热门</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+						<!-- ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.sina.com.cn" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;5fc1db4de19b4570b9f022356a7c5a00&quot;,&quot;name&quot;:&quot;新浪首页&quot;,&quot;url&quot;:&quot;http://www.sina.com.cn&quot;,&quot;host&quot;:&quot;www.sina.com.cn&quot;,&quot;favicon&quot;:&quot;http://www.sina.com.cn/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;新浪网为全球用户24小时提供全面及时的中文资讯，内容覆盖国内外突发新闻事件、体坛赛事、娱乐时尚、产业资讯、实用信息等，设有新闻、体育、娱乐、财经、科技、房产、汽车等30多个内容频道，同时开设博客、视频、论坛等自由互动交流空间。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:0,&quot;createTime&quot;:1482589076000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.sina.com.cn/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="新浪网为全球用户24小时提供全面及时的中文资讯，内容覆盖国内外突发新闻事件、体坛赛事、娱乐时尚、产业资讯、实用信息等，设有新闻、体育、娱乐、财经、科技、房产、汽车等30多个内容频道，同时开设博客、视频、论坛等自由互动交流空间。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.sina.com.cn/favicon.ico" src="http://www.sina.com.cn/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.sina.com.cn" class="ng-binding">新浪首页</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.sohu.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;d9919a83ca7b416ead9c3e74f254e50f&quot;,&quot;name&quot;:&quot;搜狐首页&quot;,&quot;url&quot;:&quot;http://www.sohu.com&quot;,&quot;host&quot;:&quot;www.sohu.com&quot;,&quot;favicon&quot;:&quot;http://www.sohu.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;搜狐网为用户提供24小时不间断的最新资讯，及搜索、邮件等网络服务。内容包括全球热点事件、突发新闻、时事评论、热播影视剧、体育赛事、行业动态、生活服务信息，以及论坛、博客、微博、我的搜狐等互动空间。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:1,&quot;createTime&quot;:1482589121000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.sohu.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="搜狐网为用户提供24小时不间断的最新资讯，及搜索、邮件等网络服务。内容包括全球热点事件、突发新闻、时事评论、热播影视剧、体育赛事、行业动态、生活服务信息，以及论坛、博客、微博、我的搜狐等互动空间。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.sohu.com/favicon.ico" src="http://www.sohu.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.sohu.com" class="ng-binding">搜狐首页</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.163.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;283833bd34404847b8fbd7b25af0e13d&quot;,&quot;name&quot;:&quot;网易首页&quot;,&quot;url&quot;:&quot;http://www.163.com&quot;,&quot;host&quot;:&quot;www.163.com&quot;,&quot;favicon&quot;:&quot;http://www.163.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:2,&quot;createTime&quot;:1482589148000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.163.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.163.com/favicon.ico" src="http://www.163.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.163.com" class="ng-binding">网易首页</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.qq.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;765deb3fce46419dafb9b95caa9f594f&quot;,&quot;name&quot;:&quot;腾讯首页&quot;,&quot;url&quot;:&quot;http://www.qq.com&quot;,&quot;host&quot;:&quot;www.qq.com&quot;,&quot;favicon&quot;:&quot;http://www.qq.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;腾讯网(www.QQ.com)是中国浏览量最大的中文门户网站，是腾讯公司推出的集新闻信息、互动社区、娱乐产品和基础服务为一体的大型综合门户网站。腾讯网服务于全球华人用户，致力成为最具传播力和互动性，权威、主流、时尚的互联网媒体平台。通过强大的实时新闻和全面深入的信息资讯服务，为中国数以亿计的互联网用户提供富有创意的网上新生活。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:3,&quot;createTime&quot;:1482589133000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.qq.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="腾讯网(www.QQ.com)是中国浏览量最大的中文门户网站，是腾讯公司推出的集新闻信息、互动社区、娱乐产品和基础服务为一体的大型综合门户网站。腾讯网服务于全球华人用户，致力成为最具传播力和互动性，权威、主流、时尚的互联网媒体平台。通过强大的实时新闻和全面深入的信息资讯服务，为中国数以亿计的互联网用户提供富有创意的网上新生活。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.qq.com/favicon.ico" src="http://www.qq.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.qq.com" class="ng-binding">腾讯首页</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.ifeng.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;aa0e7b4a81394e4ca4e2bb6c578b27fc&quot;,&quot;name&quot;:&quot;凤凰网&quot;,&quot;url&quot;:&quot;http://www.ifeng.com&quot;,&quot;host&quot;:&quot;www.ifeng.com&quot;,&quot;favicon&quot;:&quot;http://www.ifeng.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;凤凰网是中国领先的综合门户网站，提供含文图音视频的全方位综合新闻资讯、深度访谈、观点评论、财经产品、互动应用、分享社区等服务，同时与凤凰无线、凤凰宽频形成三屏联动，为全球主流华人提供互联网、无线通信、电视网三网融合无缝衔接的新媒体优质体验。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:4,&quot;createTime&quot;:1482655037000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.ifeng.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="凤凰网是中国领先的综合门户网站，提供含文图音视频的全方位综合新闻资讯、深度访谈、观点评论、财经产品、互动应用、分享社区等服务，同时与凤凰无线、凤凰宽频形成三屏联动，为全球主流华人提供互联网、无线通信、电视网三网融合无缝衔接的新媒体优质体验。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.ifeng.com/favicon.ico" src="http://www.ifeng.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.ifeng.com" class="ng-binding">凤凰网</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.china.com.cn" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:37,&quot;categoryName&quot;:&quot;门户热门&quot;,&quot;categorySortIndex&quot;:1,&quot;parentId&quot;:1,&quot;siteId&quot;:&quot;e98a379e649a48d5961d382475f65ba6&quot;,&quot;name&quot;:&quot;中国网&quot;,&quot;url&quot;:&quot;http://www.china.com.cn&quot;,&quot;host&quot;:&quot;www.china.com.cn&quot;,&quot;favicon&quot;:&quot;http://www.china.com.cn/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;国家重点新闻网站，拥有十个语种独立新闻采编、报道和发布权；第一时间报道国家重大新闻事件；国情信息库服务全球读者了解中国；国务院新闻办公室发布会独家网络直播发布网站；拥有国内外顶级学者专家资源，独家编发各种相关政策解读。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:5,&quot;createTime&quot;:1482655053000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.china.com.cn/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="国家重点新闻网站，拥有十个语种独立新闻采编、报道和发布权；第一时间报道国家重大新闻事件；国情信息库服务全球读者了解中国；国务院新闻办公室发布会独家网络直播发布网站；拥有国内外顶级学者专家资源，独家编发各种相关政策解读。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.china.com.cn/favicon.ico" src="http://www.china.com.cn/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.china.com.cn" class="ng-binding">中国网</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false -->
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div><!-- end ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false --><div class="row ng-scope" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999 ng-binding">新闻热门</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+						<!-- ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://news.sina.com.cn" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;e098d704a3b749c3b463e05fe7381c26&quot;,&quot;name&quot;:&quot;新浪新闻&quot;,&quot;url&quot;:&quot;http://news.sina.com.cn&quot;,&quot;host&quot;:&quot;news.sina.com.cn&quot;,&quot;favicon&quot;:&quot;http://news.sina.com.cn/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;新浪网新闻中心是新浪网最重要的频道之一，24小时滚动报道国内、国际及社会新闻。每日编发新闻数以万计。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:0,&quot;createTime&quot;:1482819328000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://news.sina.com.cn/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="新浪网新闻中心是新浪网最重要的频道之一，24小时滚动报道国内、国际及社会新闻。每日编发新闻数以万计。" tooltip-popup-close-delay="500">
+							<img ng-src="http://news.sina.com.cn/favicon.ico" src="http://news.sina.com.cn/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://news.sina.com.cn" class="ng-binding">新浪新闻</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://news.ifeng.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;c827fc3cbdce4c019a84a0d97df997aa&quot;,&quot;name&quot;:&quot;凤凰资讯&quot;,&quot;url&quot;:&quot;http://news.ifeng.com&quot;,&quot;host&quot;:&quot;news.ifeng.com&quot;,&quot;favicon&quot;:&quot;http://news.ifeng.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;凤凰网资讯、凤凰网新闻24小时提供大陆、台湾、香港、国际重大新闻资讯，凤凰聚焦、热追踪、凤凰知道紧跟时事热点，军事、历史、社会好玩有趣，好看的图片刷不停，大参考、第一解读、谈兵论战提供大智慧和犀利观点。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:1,&quot;createTime&quot;:1482819351000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://news.ifeng.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="凤凰网资讯、凤凰网新闻24小时提供大陆、台湾、香港、国际重大新闻资讯，凤凰聚焦、热追踪、凤凰知道紧跟时事热点，军事、历史、社会好玩有趣，好看的图片刷不停，大参考、第一解读、谈兵论战提供大智慧和犀利观点。" tooltip-popup-close-delay="500">
+							<img ng-src="http://news.ifeng.com/favicon.ico" src="http://news.ifeng.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://news.ifeng.com" class="ng-binding">凤凰资讯</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://news.qq.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;70d8919d72e04b84aee7a8bdfa3836ce&quot;,&quot;name&quot;:&quot;腾讯新闻&quot;,&quot;url&quot;:&quot;http://news.qq.com&quot;,&quot;host&quot;:&quot;news.qq.com&quot;,&quot;favicon&quot;:&quot;http://news.qq.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;腾讯新闻，事实派。新闻中心,包含有时政新闻、国内新闻、国际新闻、社会新闻、时事评论、新闻图片、新闻专题、新闻论坛、军事、历史、的专业时事报道门户网站&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:2,&quot;createTime&quot;:1482819380000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://news.qq.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="腾讯新闻，事实派。新闻中心,包含有时政新闻、国内新闻、国际新闻、社会新闻、时事评论、新闻图片、新闻专题、新闻论坛、军事、历史、的专业时事报道门户网站" tooltip-popup-close-delay="500">
+							<img ng-src="http://news.qq.com/favicon.ico" src="http://news.qq.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://news.qq.com" class="ng-binding">腾讯新闻</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://news.sohu.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;7fe6f3d1536d4eeaaf3f9e4ecef29598&quot;,&quot;name&quot;:&quot;搜狐新闻&quot;,&quot;url&quot;:&quot;http://news.sohu.com&quot;,&quot;host&quot;:&quot;news.sohu.com&quot;,&quot;favicon&quot;:&quot;http://news.sohu.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;搜狐新闻&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:3,&quot;createTime&quot;:1482819442000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://news.sohu.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="搜狐新闻" tooltip-popup-close-delay="500">
+							<img ng-src="http://news.sohu.com/favicon.ico" src="http://news.sohu.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://news.sohu.com" class="ng-binding">搜狐新闻</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://news.163.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;42b8e493de7043bba2221782749765ff&quot;,&quot;name&quot;:&quot;网易新闻&quot;,&quot;url&quot;:&quot;http://news.163.com&quot;,&quot;host&quot;:&quot;news.163.com&quot;,&quot;favicon&quot;:&quot;http://news.163.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;新闻,新闻中心,包含有时政新闻,国内新闻,国际新闻,社会新闻,时事评论,新闻图片,新闻专题,新闻论坛,军事,历史,的专业时事报道门户网站&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:4,&quot;createTime&quot;:1482819597000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://news.163.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="新闻,新闻中心,包含有时政新闻,国内新闻,国际新闻,社会新闻,时事评论,新闻图片,新闻专题,新闻论坛,军事,历史,的专业时事报道门户网站" tooltip-popup-close-delay="500">
+							<img ng-src="http://news.163.com/favicon.ico" src="http://news.163.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://news.163.com" class="ng-binding">网易新闻</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.huanqiu.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:38,&quot;categoryName&quot;:&quot;新闻热门&quot;,&quot;categorySortIndex&quot;:2,&quot;parentId&quot;:2,&quot;siteId&quot;:&quot;21a06eba950343349db724df472faeca&quot;,&quot;name&quot;:&quot;环球网&quot;,&quot;url&quot;:&quot;http://www.huanqiu.com&quot;,&quot;host&quot;:&quot;www.huanqiu.com&quot;,&quot;favicon&quot;:&quot;http://www.huanqiu.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;环球网是中国领先的国际资讯门户，拥有独立采编权的中央重点新闻网站。环球网秉承环球时报的国际视野，力求及时、客观、权威、独立地报道新闻，致力于应用前沿的互联网技术，为全球化时代的中国互联网用户提供与国际生活相关的资讯服务、互动社区。未来会致力于打造全球化在线生活平台，成为中国与国际之间沟通与交流的桥梁。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:5,&quot;createTime&quot;:1482819611000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.huanqiu.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="环球网是中国领先的国际资讯门户，拥有独立采编权的中央重点新闻网站。环球网秉承环球时报的国际视野，力求及时、客观、权威、独立地报道新闻，致力于应用前沿的互联网技术，为全球化时代的中国互联网用户提供与国际生活相关的资讯服务、互动社区。未来会致力于打造全球化在线生活平台，成为中国与国际之间沟通与交流的桥梁。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.huanqiu.com/favicon.ico" src="http://www.huanqiu.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.huanqiu.com" class="ng-binding">环球网</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false -->
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div><!-- end ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false --><div class="row ng-scope" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999 ng-binding">影视热门</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+						<!-- ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.youku.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;317715ddf3084003934d79b9827b28b9&quot;,&quot;name&quot;:&quot;优酷视频&quot;,&quot;url&quot;:&quot;http://www.youku.com&quot;,&quot;host&quot;:&quot;www.youku.com&quot;,&quot;favicon&quot;:&quot;http://static.youku.com/v1.0.166/index/img/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;视频服务平台,提供视频播放,视频发布,视频搜索,视频分享&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:0,&quot;createTime&quot;:1483078102000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.youku.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享" tooltip-popup-close-delay="500">
+							<img ng-src="http://static.youku.com/v1.0.166/index/img/favicon.ico" src="http://static.youku.com/v1.0.166/index/img/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.youku.com" class="ng-binding">优酷视频</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.iqiyi.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;80ec7786f96a467391fa1d092d7b3e16&quot;,&quot;name&quot;:&quot;爱奇艺&quot;,&quot;url&quot;:&quot;http://www.iqiyi.com&quot;,&quot;host&quot;:&quot;www.iqiyi.com&quot;,&quot;favicon&quot;:&quot;http://www.iqiyi.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;爱奇艺（iQIYI.COM）是全球领先的提供海量、优质、高清的网络视频服务的大型视频网站，网络视频播放首选平台。爱奇艺影视内容丰富多元，涵盖电影、电视剧、动漫、综艺、生活、音乐、搞笑、财经、军事、体育、片花、资讯、微电影、儿童、母婴、教育、科技、时尚、原创、公益、游戏、旅游、拍客、汽车、纪录片、爱奇艺自制剧等剧目。视频播放清晰流畅，操作界面简单友好，真正为用户带来“悦享品质”的在线观看体验。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:1,&quot;createTime&quot;:1483078165000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.iqiyi.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="爱奇艺（iQIYI.COM）是全球领先的提供海量、优质、高清的网络视频服务的大型视频网站，网络视频播放首选平台。爱奇艺影视内容丰富多元，涵盖电影、电视剧、动漫、综艺、生活、音乐、搞笑、财经、军事、体育、片花、资讯、微电影、儿童、母婴、教育、科技、时尚、原创、公益、游戏、旅游、拍客、汽车、纪录片、爱奇艺自制剧等剧目。视频播放清晰流畅，操作界面简单友好，真正为用户带来“悦享品质”的在线观看体验。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.iqiyi.com/favicon.ico" src="http://www.iqiyi.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.iqiyi.com" class="ng-binding">爱奇艺</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://tv.sohu.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;49e811ea03fa4d1c85861001f7055862&quot;,&quot;name&quot;:&quot;搜狐视频&quot;,&quot;url&quot;:&quot;http://tv.sohu.com&quot;,&quot;host&quot;:&quot;tv.sohu.com&quot;,&quot;favicon&quot;:&quot;http://tv.sohu.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;搜狐视频是搜狐旗下专业的综合视频网站，提供正版高清电影、电视剧、综艺、纪录片、动漫等。网罗最新最热新闻、娱乐咨询，同时提供免费视频空间和视频分享服务。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:2,&quot;createTime&quot;:1483081430000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://tv.sohu.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="搜狐视频是搜狐旗下专业的综合视频网站，提供正版高清电影、电视剧、综艺、纪录片、动漫等。网罗最新最热新闻、娱乐咨询，同时提供免费视频空间和视频分享服务。" tooltip-popup-close-delay="500">
+							<img ng-src="http://tv.sohu.com/favicon.ico" src="http://tv.sohu.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://tv.sohu.com" class="ng-binding">搜狐视频</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.bilibili.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;7a16a7dc9b04497691387e39cc0b20cc&quot;,&quot;name&quot;:&quot;哔哩哔哩&quot;,&quot;url&quot;:&quot;http://www.bilibili.com&quot;,&quot;host&quot;:&quot;www.bilibili.com&quot;,&quot;favicon&quot;:&quot;http://static.hdslb.com/images/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:4,&quot;createTime&quot;:1483081474000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.bilibili.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="bilibili是国内知名的视频弹幕网站，这里有最及时的动漫新番，最棒的ACG氛围，最有创意的Up主。大家可以在这里找到许多欢乐。" tooltip-popup-close-delay="500">
+							<img ng-src="http://static.hdslb.com/images/favicon.ico" src="http://static.hdslb.com/images/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.bilibili.com" class="ng-binding">哔哩哔哩</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://dytt8.net" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;5d22fb37732747fa87d66d51c14962e4&quot;,&quot;name&quot;:&quot;电影天堂&quot;,&quot;url&quot;:&quot;http://dytt8.net&quot;,&quot;host&quot;:&quot;dytt8.net&quot;,&quot;favicon&quot;:&quot;http://dytt8.net/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;最好的迅雷电影下载网，分享最新电影，高清电影、综艺、动漫、电视剧等下载！&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:5,&quot;createTime&quot;:1483081645000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://dytt8.net/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="最好的迅雷电影下载网，分享最新电影，高清电影、综艺、动漫、电视剧等下载！" tooltip-popup-close-delay="500">
+							<img ng-src="http://dytt8.net/favicon.ico" src="http://dytt8.net/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://dytt8.net" class="ng-binding">电影天堂</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="https://v.qq.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:39,&quot;categoryName&quot;:&quot;影视热门&quot;,&quot;categorySortIndex&quot;:4,&quot;parentId&quot;:3,&quot;siteId&quot;:&quot;f596a399b1d6462695f7e2115de18f41&quot;,&quot;name&quot;:&quot;腾讯视频&quot;,&quot;url&quot;:&quot;https://v.qq.com&quot;,&quot;host&quot;:&quot;v.qq.com&quot;,&quot;favicon&quot;:&quot;http://v.qq.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;腾讯视频致力于打造中国领先的在线视频媒体平台，以丰富的内容、极致的观看体验、便捷的登录方式、24小时多平台无缝应用体验以及快捷分享的产品特性，主要满足用户在线观看视频的需求。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:6,&quot;createTime&quot;:1483081950000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="https://v.qq.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="腾讯视频致力于打造中国领先的在线视频媒体平台，以丰富的内容、极致的观看体验、便捷的登录方式、24小时多平台无缝应用体验以及快捷分享的产品特性，主要满足用户在线观看视频的需求。" tooltip-popup-close-delay="500">
+							<img ng-src="http://v.qq.com/favicon.ico" src="http://v.qq.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="https://v.qq.com" class="ng-binding">腾讯视频</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false -->
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div><!-- end ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false --><div class="row ng-scope" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999 ng-binding">游戏热门</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+						<!-- ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://game.qq.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;4a9ae642ac664abdb0d2256072096c56&quot;,&quot;name&quot;:&quot;腾讯游戏&quot;,&quot;url&quot;:&quot;http://game.qq.com&quot;,&quot;host&quot;:&quot;game.qq.com&quot;,&quot;favicon&quot;:&quot;http://game.qq.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;腾讯游戏是腾讯四大网络平台之一，是全球领先的游戏开发和运营机构，也是国内最大的网络游戏社区。无论是腾讯公司整体的在线生活模式布局，还是腾讯游戏的产品布局，都是从用户的最基本需求、最简单应用入手，注重产品的可持续发展和长久生命力，打造绿色健康的精品游戏。在开放性的发展模式下，腾讯游戏采取内部自主研发和多元化的外部合作两者结合的方式，已经在网络游戏的多个细分市场领域形成专业化布局并取得良好的市场业绩。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:0,&quot;createTime&quot;:1482677136000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://game.qq.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="腾讯游戏是腾讯四大网络平台之一，是全球领先的游戏开发和运营机构，也是国内最大的网络游戏社区。无论是腾讯公司整体的在线生活模式布局，还是腾讯游戏的产品布局，都是从用户的最基本需求、最简单应用入手，注重产品的可持续发展和长久生命力，打造绿色健康的精品游戏。在开放性的发展模式下，腾讯游戏采取内部自主研发和多元化的外部合作两者结合的方式，已经在网络游戏的多个细分市场领域形成专业化布局并取得良好的市场业绩。" tooltip-popup-close-delay="500">
+							<img ng-src="http://game.qq.com/favicon.ico" src="http://game.qq.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://game.qq.com" class="ng-binding">腾讯游戏</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://game.163.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;d029dfa884e44ecab4a04c7b9f0b9896&quot;,&quot;name&quot;:&quot;网易游戏&quot;,&quot;url&quot;:&quot;http://game.163.com&quot;,&quot;host&quot;:&quot;game.163.com&quot;,&quot;favicon&quot;:&quot;http://game.163.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;我和你一样，我们都是游戏热爱者。网易在线游戏自主研发运营多款在线游戏，包括《大话西游Ⅱ》、《梦幻西游2》、《新大话西游3 》、《武魂》、《天下3》、《大唐无双2》、《倩女幽魂2》、《新飞飞》等。此外，网易还具有《魔兽世界》、《星际争霸Ⅱ》、《魔兽争霸Ⅲ:混乱之治》、《魔兽争霸Ⅲ:冰封王座》在中国大陆的独家运营权。网易游戏 在中国MMORPG游戏市场保持领先地位。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:1,&quot;createTime&quot;:1482677200000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://game.163.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="我和你一样，我们都是游戏热爱者。网易在线游戏自主研发运营多款在线游戏，包括《大话西游Ⅱ》、《梦幻西游2》、《新大话西游3 》、《武魂》、《天下3》、《大唐无双2》、《倩女幽魂2》、《新飞飞》等。此外，网易还具有《魔兽世界》、《星际争霸Ⅱ》、《魔兽争霸Ⅲ:混乱之治》、《魔兽争霸Ⅲ:冰封王座》在中国大陆的独家运营权。网易游戏 在中国MMORPG游戏市场保持领先地位。" tooltip-popup-close-delay="500">
+							<img ng-src="http://game.163.com/favicon.ico" src="http://game.163.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://game.163.com" class="ng-binding">网易游戏</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://games.sina.com.cn" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;6790bce312af42cdbeafd61099d85fbb&quot;,&quot;name&quot;:&quot;新浪游戏&quot;,&quot;url&quot;:&quot;http://games.sina.com.cn&quot;,&quot;host&quot;:&quot;games.sina.com.cn&quot;,&quot;favicon&quot;:&quot;http://games.sina.com.cn/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;新浪游戏-全球最大中文游戏媒体,提供最新PC网络游戏、手机游戏、单机游戏、电视游戏、网页游戏等新闻资讯报道,好玩的游戏排行、游戏专区、游戏攻略、游戏下载等服务,是全球游戏玩家首选游戏网站。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:2,&quot;createTime&quot;:1482722581000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://games.sina.com.cn/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="新浪游戏-全球最大中文游戏媒体,提供最新PC网络游戏、手机游戏、单机游戏、电视游戏、网页游戏等新闻资讯报道,好玩的游戏排行、游戏专区、游戏攻略、游戏下载等服务,是全球游戏玩家首选游戏网站。" tooltip-popup-close-delay="500">
+							<img ng-src="http://games.sina.com.cn/favicon.ico" src="http://games.sina.com.cn/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://games.sina.com.cn" class="ng-binding">新浪游戏</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.tgbus.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;a840c6ac0ae746b198880168a21bbe44&quot;,&quot;name&quot;:&quot;电玩巴士&quot;,&quot;url&quot;:&quot;http://www.tgbus.com&quot;,&quot;host&quot;:&quot;www.tgbus.com&quot;,&quot;favicon&quot;:&quot;http://www.tgbus.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;电玩巴士，中国游戏第一门户站，一直致力于发展中国电玩产业和网络游戏事业，最完美的游戏免费下载，最及时的游戏资讯，最完整的游戏攻略，最及时的游戏视频攻略，以及打造拥有数千万会员的社交新媒体平台。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:3,&quot;createTime&quot;:1482722642000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.tgbus.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="电玩巴士，中国游戏第一门户站，一直致力于发展中国电玩产业和网络游戏事业，最完美的游戏免费下载，最及时的游戏资讯，最完整的游戏攻略，最及时的游戏视频攻略，以及打造拥有数千万会员的社交新媒体平台。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.tgbus.com/favicon.ico" src="http://www.tgbus.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.tgbus.com" class="ng-binding">电玩巴士</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.duowan.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;e14833bd82134f8b81a663ffe8a90b16&quot;,&quot;name&quot;:&quot;多玩游戏&quot;,&quot;url&quot;:&quot;http://www.duowan.com&quot;,&quot;host&quot;:&quot;www.duowan.com&quot;,&quot;favicon&quot;:&quot;http://www.duowan.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;多玩游戏网以最专业的游戏新闻中心,最具特色YY语音社区,最强大的游戏论坛为重要组成部分,为玩家提供资讯娱乐全方位体验,成为游戏玩家首要选择的网络游戏资讯门户网站。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:4,&quot;createTime&quot;:1482722666000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.duowan.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="多玩游戏网以最专业的游戏新闻中心,最具特色YY语音社区,最强大的游戏论坛为重要组成部分,为玩家提供资讯娱乐全方位体验,成为游戏玩家首要选择的网络游戏资讯门户网站。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.duowan.com/favicon.ico" src="http://www.duowan.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.duowan.com" class="ng-binding">多玩游戏</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.17173.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:40,&quot;categoryName&quot;:&quot;游戏热门&quot;,&quot;categorySortIndex&quot;:5,&quot;parentId&quot;:4,&quot;siteId&quot;:&quot;16f9fe8074e5480db01c95ce2a3c81e8&quot;,&quot;name&quot;:&quot;17173游戏&quot;,&quot;url&quot;:&quot;http://www.17173.com&quot;,&quot;host&quot;:&quot;www.17173.com&quot;,&quot;favicon&quot;:&quot;http://www.17173.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;17173是中国游戏第一门户站,全年365天保持不间断更新,您可以在这里获得专业的游戏新闻资讯,完善的游戏攻略专区,人气游戏论坛以及游戏测试账号等,是游戏玩家首选网络游戏资讯门户网站。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:5,&quot;createTime&quot;:1482722703000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.17173.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="17173是中国游戏第一门户站,全年365天保持不间断更新,您可以在这里获得专业的游戏新闻资讯,完善的游戏攻略专区,人气游戏论坛以及游戏测试账号等,是游戏玩家首选网络游戏资讯门户网站。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.17173.com/favicon.ico" src="http://www.17173.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.17173.com" class="ng-binding">17173游戏</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false -->
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div><!-- end ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false --><div class="row ng-scope" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999 ng-binding">网购热门</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-chevron-down" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom in collapse" aria-expanded="true" aria-hidden="false" style="height: auto;">
+						<!-- ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="https://www.tmall.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;7db99717c66b44fd93c9a8ee4dc79abc&quot;,&quot;name&quot;:&quot;天猫tmall.com&quot;,&quot;url&quot;:&quot;https://www.tmall.com&quot;,&quot;host&quot;:&quot;www.tmall.com&quot;,&quot;favicon&quot;:&quot;https://www.tmall.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;中国地标性的线上综合购物平台，拥有超过1.2万国际品牌，18万知名大牌，8.9万旗舰店。致力为日益成熟的中国消费者提供全球精选商品和世界级的品质购物体验！&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:0,&quot;createTime&quot;:1482658534000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="https://www.tmall.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="中国地标性的线上综合购物平台，拥有超过1.2万国际品牌，18万知名大牌，8.9万旗舰店。致力为日益成熟的中国消费者提供全球精选商品和世界级的品质购物体验！" tooltip-popup-close-delay="500">
+							<img ng-src="https://www.tmall.com/favicon.ico" src="https://www.tmall.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="https://www.tmall.com" class="ng-binding">天猫tmall.com</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="https://www.jd.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;9ae6efd97fc9454f90cac706a063d5a3&quot;,&quot;name&quot;:&quot;京东商城&quot;,&quot;url&quot;:&quot;https://www.jd.com&quot;,&quot;host&quot;:&quot;www.jd.com&quot;,&quot;favicon&quot;:&quot;https://www.jd.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:1,&quot;createTime&quot;:1482658555000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="https://www.jd.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" tooltip-popup-close-delay="500">
+							<img ng-src="https://www.jd.com/favicon.ico" src="https://www.jd.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="https://www.jd.com" class="ng-binding">京东商城</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="https://www.amazon.cn" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;85f7ab9c440a4103b8d28bff90daa7ea&quot;,&quot;name&quot;:&quot;亚马逊&quot;,&quot;url&quot;:&quot;https://www.amazon.cn&quot;,&quot;host&quot;:&quot;www.amazon.cn&quot;,&quot;favicon&quot;:&quot;https://www.amazon.cn/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;亚马逊中国（z.cn）坚持“以客户为中心”的理念，秉承“天天低价，正品行货”信念，销售图书、电脑、数码家电、母婴百货、服饰箱包等上千万种产品。亚马逊中国提供专业服务：正品行货天天低价，机打发票全国联保。货到付款，30天内可退换货。亚马逊为中国消费者提供便利、快捷的网购体验。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:2,&quot;createTime&quot;:1482659288000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="https://www.amazon.cn/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="亚马逊中国（z.cn）坚持“以客户为中心”的理念，秉承“天天低价，正品行货”信念，销售图书、电脑、数码家电、母婴百货、服饰箱包等上千万种产品。亚马逊中国提供专业服务：正品行货天天低价，机打发票全国联保。货到付款，30天内可退换货。亚马逊为中国消费者提供便利、快捷的网购体验。" tooltip-popup-close-delay="500">
+							<img ng-src="https://www.amazon.cn/favicon.ico" src="https://www.amazon.cn/favicon.ico"> 
+						</div>
+						
+						<h5 title="https://www.amazon.cn" class="ng-binding">亚马逊</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="https://www.taobao.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;205860506586499389c5e1cfe4eade0b&quot;,&quot;name&quot;:&quot;淘宝网&quot;,&quot;url&quot;:&quot;https://www.taobao.com&quot;,&quot;host&quot;:&quot;www.taobao.com&quot;,&quot;favicon&quot;:&quot;https://www.taobao.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:3,&quot;createTime&quot;:1482660500000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="https://www.taobao.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！" tooltip-popup-close-delay="500">
+							<img ng-src="https://www.taobao.com/favicon.ico" src="https://www.taobao.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="https://www.taobao.com" class="ng-binding">淘宝网</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.jd.hk" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;fba417d3c9ec4da993b129c69f993b5d&quot;,&quot;name&quot;:&quot;京东全球购&quot;,&quot;url&quot;:&quot;http://www.jd.hk&quot;,&quot;host&quot;:&quot;www.jd.hk&quot;,&quot;favicon&quot;:&quot;http://www.jd.hk/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;京东全球购是国内最有保障的海外购物平台,提供母婴用品,护肤品,彩妆,钟表首饰,数码电器等全球优质商品,全球直供,售后无忧,来京东全球购,开启您的海外购物之旅吧.&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:4,&quot;createTime&quot;:1482721582000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.jd.hk/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="京东全球购是国内最有保障的海外购物平台,提供母婴用品,护肤品,彩妆,钟表首饰,数码电器等全球优质商品,全球直供,售后无忧,来京东全球购,开启您的海外购物之旅吧." tooltip-popup-close-delay="500">
+							<img ng-src="http://www.jd.hk/favicon.ico" src="http://www.jd.hk/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.jd.hk" class="ng-binding">京东全球购</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false --><div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2 ng-scope" ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="http://www.yhd.com" target="_blank" ui-draggable="true" drag="{&quot;categoryId&quot;:41,&quot;categoryName&quot;:&quot;网购热门&quot;,&quot;categorySortIndex&quot;:6,&quot;parentId&quot;:5,&quot;siteId&quot;:&quot;848f8c035f2b42278889dcff305ad250&quot;,&quot;name&quot;:&quot;1号店&quot;,&quot;url&quot;:&quot;http://www.yhd.com&quot;,&quot;host&quot;:&quot;www.yhd.com&quot;,&quot;favicon&quot;:&quot;http://www.yhd.com/favicon.ico&quot;,&quot;keyword&quot;:null,&quot;description&quot;:&quot;1号店网上超市，最经济实惠的网上购物商城，用鼠标逛超市，不用排队，方便实惠送上门，网上购物新生活。&quot;,&quot;status&quot;:1,&quot;isHot&quot;:false,&quot;isNew&quot;:false,&quot;sortIndex&quot;:5,&quot;createTime&quot;:1482721651000,&quot;userFavorite&quot;:null,&quot;userCommon&quot;:null}" drag-channel="site" on-drop-success="dropSuccess($event)" class="box-thumbnail" draggable="true" href="http://www.yhd.com/">
+						
+						
+						<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="1号店网上超市，最经济实惠的网上购物商城，用鼠标逛超市，不用排队，方便实惠送上门，网上购物新生活。" tooltip-popup-close-delay="500">
+							<img ng-src="http://www.yhd.com/favicon.ico" src="http://www.yhd.com/favicon.ico"> 
+						</div>
+						
+						<h5 title="http://www.yhd.com" class="ng-binding">1号店</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<!-- ngIf: !site.userCommon --><button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default ng-scope">
+							<i class="fa fa-heart">
+								</i>
+							</button><!-- end ngIf: !site.userCommon -->
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div><!-- end ngRepeat: site in sites.categorySites|orderBy: 'sortIndex':false -->
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div><!-- end ngRepeat: sites in sitesMap|orderBy: 'categorySortIndex':false -->
+              <!--
+              	end site row
+              -->
+		
+		
+	</div>
+	<p ng-show="loadMore.loading" class="col-xs-12 text-center color-999 ng-hide">
+		正在加载...
+	</p>
+</div></div>
+<div class="row ng-scope">
+	<div class="col-xs-12">
+		<div class="panel panel-success">
+			<div class="panel-heading padding-vertical-10">
+				<span class="ng-binding">
+					社区帖子-[不限分类]
+				</span>
+				<a target="_blank" ui-sref="forum.index.post.all({tags:$root.categoryName})" class="pull-right color-999 btn btn-link btn-link-right" href="http://mdwhat.com/forum/index///all">
+					查看更多	
+				</a>
+			</div>
+			<div class="panel-body media-list">
+				<!-- uiView: home-content-post --><div ui-view="home-content-post" class="ng-scope" style=""><!-- ngIf: !postList||postList.length==0 -->
+<!-- ngRepeat: post in postList|orderBy: '-createTime':false --><li class="media row post-item ng-scope" ng-repeat="post in postList|orderBy: '-createTime':false" style="">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100" href="/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite" src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100">
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/">
+								<span class="color-999 no-margin ng-binding">
+									[IT互联网]
+								</span>
+							哪些网站适合自学web前端开发？
+							</a>
+							
+							<!-- ngIf: post.userId==$root.modaowangUser.user.userId -->
+						</h4>
+						<p class="text-free ng-binding">没有编程基础，想自学web前端，求推荐容易上手的前端学习网站？</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<!-- ngIf: post.type==1 -->
+							<!-- ngIf: post.type==0 --><a ui-sref="forum.post-detail.page({postId:post.id})" ng-if="post.type==0" class="color-999 ng-binding ng-scope" href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/">
+								<!-- ngIf: !post.awardedReplyId --><i ng-if="!post.awardedReplyId" class="text-red fa fa-question-circle-o ng-scope"></i><!-- end ngIf: !post.awardedReplyId -->
+								<!-- ngIf: post.awardedReplyId -->
+								1赏分
+							</a><!-- end ngIf: post.type==0 -->
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer ng-binding" ng-click="$root.praisePost(post)">
+								<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							(0)
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/">
+								<i class="fa fa-comment-o"></i>
+							(1)
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999 ng-binding" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})" href="http://mdwhat.com/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite">
+								<i class="glyphicon glyphicon-user"></i>
+								~追梦~	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right ng-binding">
+							2017-02-24 23:06
+
+						</div>
+					</div>
+				</div>
+
+			</li><!-- end ngRepeat: post in postList|orderBy: '-createTime':false --><li class="media row post-item ng-scope" ng-repeat="post in postList|orderBy: '-createTime':false">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100" href="/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite" src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100">
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="http://mdwhat.com/forum/post-detail/d4b65c6f88aa452ab95571ef315fb6ba/">
+								<span class="color-999 no-margin ng-binding">
+									[工作求职]
+								</span>
+							有没有一些可以提高办公效率的网站或软件?
+							</a>
+							
+							<!-- ngIf: post.userId==$root.modaowangUser.user.userId -->
+						</h4>
+						<p class="text-free ng-binding">工作中经常用到word，excel，ppt和一些简单作图工具，但因为使用不够熟练导致办公效率底下，求......</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<!-- ngIf: post.type==1 -->
+							<!-- ngIf: post.type==0 --><a ui-sref="forum.post-detail.page({postId:post.id})" ng-if="post.type==0" class="color-999 ng-binding ng-scope" href="http://mdwhat.com/forum/post-detail/d4b65c6f88aa452ab95571ef315fb6ba/">
+								<!-- ngIf: !post.awardedReplyId -->
+								<!-- ngIf: post.awardedReplyId --><i ng-if="post.awardedReplyId" class="text-green fa fa-check-circle-o ng-scope"></i><!-- end ngIf: post.awardedReplyId -->
+								2赏分
+							</a><!-- end ngIf: post.type==0 -->
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer ng-binding" ng-click="$root.praisePost(post)">
+								<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							(0)
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="/forum/post-detail/d4b65c6f88aa452ab95571ef315fb6ba/">
+								<i class="fa fa-comment-o"></i>
+							(1)
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999 ng-binding" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})" href="http://mdwhat.com/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite">
+								<i class="glyphicon glyphicon-user"></i>
+								~追梦~	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right ng-binding">
+							2017-02-24 10:12
+
+						</div>
+					</div>
+				</div>
+
+			</li><!-- end ngRepeat: post in postList|orderBy: '-createTime':false --><li class="media row post-item ng-scope" ng-repeat="post in postList|orderBy: '-createTime':false">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png" href="/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite" src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png">
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="http://mdwhat.com/forum/post-detail/c6cb11ac2e45432085fd740c94403b03/">
+								<span class="color-999 no-margin ng-binding">
+									[国外酷站]
+								</span>
+							多平台翻墙梯子-Green Vpn
+							</a>
+							
+							<!-- ngIf: post.userId==$root.modaowangUser.user.userId -->
+						</h4>
+						<p class="text-free ng-binding">Green是一款提供稳定快速的网络优化服务的Vpn工具，支持Windows、Mac、Ios、andr......</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<!-- ngIf: post.type==1 --><a ng-href="https://www.greenjsq.me" target="_blank" ng-if="post.type==1" class="color-999 ng-binding ng-scope" title="https://www.greenjsq.me" href="https://www.greenjsq.me/">
+								<i class="text-green fa fa-share-alt"></i>
+								https://www.greenjsq.me
+							</a><!-- end ngIf: post.type==1 -->
+							<!-- ngIf: post.type==0 -->
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer ng-binding" ng-click="$root.praisePost(post)">
+								<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							(0)
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="/forum/post-detail/c6cb11ac2e45432085fd740c94403b03/">
+								<i class="fa fa-comment-o"></i>
+							(0)
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999 ng-binding" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})" href="http://mdwhat.com/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite">
+								<i class="glyphicon glyphicon-user"></i>
+								mdwhat	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right ng-binding">
+							2017-02-21 21:26
+
+						</div>
+					</div>
+				</div>
+
+			</li><!-- end ngRepeat: post in postList|orderBy: '-createTime':false --><li class="media row post-item ng-scope" ng-repeat="post in postList|orderBy: '-createTime':false">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png" href="/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite" src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png">
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="http://mdwhat.com/forum/post-detail/8d4e135f81d447e2a88f0c0d0e8361d6/">
+								<span class="color-999 no-margin ng-binding">
+									[不限分类]
+								</span>
+							完全匿名的自由贴图网站-4chan
+							</a>
+							
+							<!-- ngIf: post.userId==$root.modaowangUser.user.userId -->
+						</h4>
+						<p class="text-free ng-binding">4chan最大的特点就是完全的匿名性，同时4chan不提供内容的保存，每过24小时就会把数据清除一遍......</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<!-- ngIf: post.type==1 --><a ng-href="http://www.4chan.org" target="_blank" ng-if="post.type==1" class="color-999 ng-binding ng-scope" title="http://www.4chan.org" href="http://www.4chan.org/">
+								<i class="text-green fa fa-share-alt"></i>
+								http://www.4chan.org
+							</a><!-- end ngIf: post.type==1 -->
+							<!-- ngIf: post.type==0 -->
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer ng-binding" ng-click="$root.praisePost(post)">
+								<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							(0)
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="/forum/post-detail/8d4e135f81d447e2a88f0c0d0e8361d6/">
+								<i class="fa fa-comment-o"></i>
+							(0)
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999 ng-binding" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})" href="http://mdwhat.com/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite">
+								<i class="glyphicon glyphicon-user"></i>
+								mdwhat	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right ng-binding">
+							2017-02-20 17:08
+
+						</div>
+					</div>
+				</div>
+
+			</li><!-- end ngRepeat: post in postList|orderBy: '-createTime':false --><li class="media row post-item ng-scope" ng-repeat="post in postList|orderBy: '-createTime':false">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png" href="/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite" src="/pub/image/c93894fd30214ea791d4cfbf59461199/c93894fd30214ea791d4cfbf594611991487420350851.png">
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="http://mdwhat.com/forum/post-detail/aa0dfc286ad04671bba8767fbc5ea9d4/">
+								<span class="color-999 no-margin ng-binding">
+									[音乐聆听]
+								</span>
+							清新脱俗的独立音乐推荐-落网
+							</a>
+							
+							<!-- ngIf: post.userId==$root.modaowangUser.user.userId -->
+						</h4>
+						<p class="text-free ng-binding">落网致力于推荐国内外朴素有质感的独立音乐，你可以在期刊菜单选择适合心境的主题专辑，感受音乐和灵心互动......</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<!-- ngIf: post.type==1 --><a ng-href="http://www.luoo.net" target="_blank" ng-if="post.type==1" class="color-999 ng-binding ng-scope" title="http://www.luoo.net" href="http://www.luoo.net/">
+								<i class="text-green fa fa-share-alt"></i>
+								http://www.luoo.net
+							</a><!-- end ngIf: post.type==1 -->
+							<!-- ngIf: post.type==0 -->
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer ng-binding" ng-click="$root.praisePost(post)">
+								<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							(0)
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})" class="ng-binding" href="/forum/post-detail/aa0dfc286ad04671bba8767fbc5ea9d4/">
+								<i class="fa fa-comment-o"></i>
+							(0)
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999 ng-binding" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})" href="http://mdwhat.com/public/user-zone/c93894fd30214ea791d4cfbf59461199/favorite">
+								<i class="glyphicon glyphicon-user"></i>
+								mdwhat	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right ng-binding">
+							2017-02-19 21:12
+
+						</div>
+					</div>
+				</div>
+
+			</li><!-- end ngRepeat: post in postList|orderBy: '-createTime':false --></div>
+			</div>
+		</div>
+
+	</div>
+
+</div></div>
+		
+
+		<!-- ngInclude: 'templates/home/layouts/footer.html' --><div ng-include="'templates/home/layouts/footer.html'" class="clearfix ng-scope" style="">
+<div class="text-center margin-vertical-15 color-999 ng-binding ng-scope">
+	©2015-2017,深圳市友全科技有限公司,粤ICP备16120960号
+</div>
+<div scroll-to-top="" class="btn btn-float ng-scope">
+	<i class="glyphicon glyphicon-chevron-up"></i>
+</div></div>
+		
+		<!-- ngRepeat: msg in $root.tips.message -->
+	</div>
+	<!-- end #content -->
+
+</div>
+<!-- end page container --></div>
+
+		<script type="text/javascript" src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-native-dragdrop/draganddrop.min.js"></script>
+		<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+
+		<script src="node_modules/angular-perfect-scrollbar-2/dist/index.min.js"></script>
+		<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular-rangy.min.js"></script>
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular.min.js"></script>
+
+		<script type="text/javascript" src="js/plugin/angular-pinyin-translate/dist/angular-pinyin-translate.min.js"></script>
+		<!--<script src="js/plugin/ngImgCrop/ng-img-crop.min.js"></script>-->
+
+		<!--<script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+		<script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>-->
+
+		<script type="text/javascript" src="node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+		<script type="text/javascript" src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.min.js"></script>
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/utils/directive.js"></script>
+		<script type="text/javascript" src="js/utils/filter.js"></script>
+		<script type="text/javascript" src="js/utils/utils.js"></script>
+
+		<script type="text/javascript" src="js/service/common.js"></script>
+		<script type="text/javascript" src="js/service/interceptor.js"></script>
+		<script type="text/javascript" src="js/service/apiService.js"></script>
+		<script type="text/javascript" src="js/service/storageH.js"></script>
+
+		<script type="text/javascript" src="js/controller/componentCtrl.js"></script>
+		<script type="text/javascript" src="js/controller/gameCtrl.js"></script>
+
+		<!--<script src="js/controller/homeLayoutCtrl.js"></script>
+		<script src="js/controller/homeCtrl.js"></script>-->
+
+		<!--<script src="js/controller/forumLayoutCtrl.js"></script>
+		<script src="js/controller/forumCtrl.js"></script>-->
+
+		<!--<script src="js/controller/publicLayoutCtrl.js"></script>
+		<script src="js/controller/publicCtrl.js"></script>-->
+
+		<!--qq登录代码-->
+		<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101369901" data-redirecturi="http://mdwhat.com/public/login-redirect" charset="utf-8"></script><script src="http://qzonestyle.gtimg.cn/qzone/openapi/qc-1.0.1.js" type="text/javascript" data-appid="101369901" data-redirecturi="http://mdwhat.com/public/login-redirect" charset="utf-8"></script>
+		<!--baidu数据统计代码-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?eb514b12a1a58bb5daca1ce9b6880b46";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<!--百度分享代码-->
+		<script>
+			window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "魔导网，只为发现未知的惊喜。", "bdMini": "1", "bdMiniList": ["weixin", "sqq", "qzone", "tsina"], "bdPic": "http://mdwhat.com/img/logo-md.png", "bdStyle": "0", "bdSize": "16" }, "slide": { "type": "slide", "bdImg": "4", "bdPos": "right", "bdTop": "44" } };
+			(document.getElementsByTagName('head')[0] || body).appendChild(document.createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5);
+		</script>
+
+	
+
+<iframe src="https://graph.qq.com/jsdkproxy/PMProxy.html#1.0.1" style="width: 0px; height: 0px; display: none; overflow: hidden;"></iframe><div class="bdshare-slide-button-box bdshare-slide-style-r4" style="top: 44px; width: 0px; z-index: 99999; right: 0px;" data-bd-bind="1488005392356"><a href="http://mdwhat.com/_23" onclick="return false;" class="bdshare-slide-button" style="left: -24px;"></a><div class="bdshare-slide-list-box" style="width: 0px; display: none;"><div class="bdshare-slide-top">分享到</div><div class="bdshare-slide-list"><ul class="bdshare-slide-list-ul" style="width: 116px;"></ul></div><div class="bdshare-slide-bottom" style="width: 116px;"><a href="http://mdwhat.com/_23" onclick="return false;" class="slide-more" data-cmd="more">更多...</a></div></div></div></body></html>

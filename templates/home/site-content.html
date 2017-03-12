@@ -1,0 +1,99 @@
+
+<ul class="nav">
+	<li ng-class="{'active':$state.includes('home.index.site.common')}" class="content-header-menu">
+		<span ng-click="changeTab('common')">常用</span>
+	</li>
+	<li ng-class="{'active':$state.includes('home.index.site.favorite.detail')}" class="content-header-menu">
+		<span ng-click="changeTab('favorite.detail')">收藏</span>
+	</li>
+	<li ng-class="{'active':$state.includes('home.index.site.tool')}" class="content-header-menu">
+		<span ng-click="changeTab('tool')">工具</span>
+	</li>
+	<li ng-class="{'active':$state.includes('home.index.site.activity')}" class="content-header-menu">
+		<span ng-click="changeTab('activity')">活动</span>
+	</li>
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="home-common" ng-show="$state.includes('home.index.site.common')">
+			
+		</div>
+		<div ui-view="home-favorite" ng-show="$state.includes('home.index.site.favorite.detail')">
+			
+		</div>
+	<div ui-view="home-tool" ng-show="$state.includes('home.index.site.tool')">
+			
+		</div>
+	<div ui-view="home-activity" ng-show="$state.includes('home.index.site.activity')">
+			
+		</div>
+</div>
+
+
+<div class="row" 
+	infinite-scroll="loadMoreSite()" 
+	
+	infinite-scroll-disabled="loadMore.loading||!sitesMap" 
+	infinite-scroll-immediate-check="false" 
+	infinite-scroll-use-document-bottom="false">
+	
+	<div class="col-xs-12 box-container padding-top-15">
+		
+		<div class="row" ng-repeat="sites in sitesMap|orderBy: 'categorySortIndex':false">
+			<div class="col-xs-12">
+				
+				<div class="panel panel-default">
+					<div class="panel-heading padding-vertical-10">
+						<h3 class="color-999">{{sites.categoryName}}</h3>
+						
+						<span ng-click="toggleGroup[$index] = !toggleGroup[$index]" ng-href="javascript:void(0)" class="pull-right color-999 btn btn-link btn-link-right">
+							<i class="glyphicon" ng-class="{'glyphicon-chevron-down':!toggleGroup[$index],'glyphicon-chevron-left':toggleGroup[$index]}"></i>
+						</span>
+					</div>
+					<div uib-collapse="toggleGroup[$index]" class="panel-body no-padding-horizontal no-padding-bottom">
+						<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" 
+				ng-repeat="site in sites.categorySites|orderBy: 'sortIndex':false">
+				<div class="box">
+					<a ng-href="{{site.url}}" target="_blank"
+						 ui-draggable="true" drag="{{site}}" drag-channel="site" 
+						on-drop-success="dropSuccess($event)" class="box-thumbnail" 
+						>
+						
+						
+						<div ng-mouseover="$root.getSiteDescription(site)" class="box-img" tooltip-placement="bottom-left" uib-tooltip="{{site.description||'loading'}}" tooltip-popup-close-delay="500">
+							<img ng-src="{{site.favicon}}" /> 
+						</div>
+						
+						<h5 title="{{site.url}}">{{site.name}}</h5>
+						
+					</a>
+					<div class="box-menu btn-group">
+							<button title="添加到常用" ng-if="!site.userCommon" ng-click="addCommonSite(site.siteId,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-heart">
+								</i>
+							</button>
+							<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+
+						</div>
+				</div>
+			</div>
+					</div>
+				</div>
+				
+			</div>
+			
+
+		</div>
+              <!--
+              	end site row
+              -->
+		
+		
+	</div>
+	<p ng-show="loadMore.loading" class="col-xs-12 text-center color-999">
+		正在加载...
+	</p>
+</div>

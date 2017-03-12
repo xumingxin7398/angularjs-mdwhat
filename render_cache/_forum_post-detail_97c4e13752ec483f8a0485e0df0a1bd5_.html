@@ -1,0 +1,460 @@
+<!DOCTYPE html><html ng-app="modaowang" class="ng-scope"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:8080 data: gap: https://ssl.gstatic.com *;connect-src 'self' 'unsafe-inline' 'unsafe-eval' *;style-src 'self' 'unsafe-inline' 'unsafe-eval' http://bdimg.share.baidu.com;media-src *;script-src 'self' 'unsafe-eval' 'unsafe-inline' http://qzonestyle.gtimg.cn https://graph.qq.com/oauth2.0/me https://hm.baidu.com http://bdimg.share.baidu.com;child-src *;">
+		<meta name="keywords" content="网址导航,网址收藏,网址问答,网址分享,共享收藏夹,魔导网,只为发现未知的惊喜.">
+		<meta name="description" content="魔导网是一个集成了网址导航,网址收藏,网址问答,网址分享,共享收藏夹等功能的新型导航网站.魔导网,只为发现未知的惊喜.">
+		<base href="/">
+		<title data-ng-bind="$state.current.data.pageTitle+'-魔导网'" class="ng-binding">哪些网站适合自学web前端开发？-魔导网</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+		<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.min.css" rel="stylesheet">
+		<link href="node_modules/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="node_modules/textangular/dist/textAngular.css">
+		<!--<link rel="stylesheet" href="js/plugin/ngImgCrop/ng-img-crop.min.css">-->
+	
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/metronic.css" rel="stylesheet">
+		<link href="css/style-responsive.min.css" rel="stylesheet">
+
+		<link href="css/iconfont/iconfont.css" rel="stylesheet">
+		
+		<link href="css/style.css" rel="stylesheet">
+
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="node_modules/ui-router-extras/release/ct-ui-router-extras.min.js"></script>
+		
+		<script type="text/javascript" src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+	<style type="text/css" data-href="app.css">/* perfect-scrollbar v0.6.11 */
+.ps-container {
+  -ms-touch-action: none;
+  touch-action: none;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+}
+@supports (-ms-overflow-style: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+.ps-container.ps-active-x>.ps-scrollbar-x-rail,
+.ps-container.ps-active-y>.ps-scrollbar-y-rail {
+  display: block;
+  background-color: transparent;
+}
+.ps-container.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container>.ps-scrollbar-x-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  -moz-transition: background-color .2s linear, opacity .2s linear;
+  -o-transition: background-color .2s linear, opacity .2s linear;
+  transition: background-color .2s linear, opacity .2s linear;
+  bottom: 3px;
+  height: 8px;
+}
+.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;
+  -o-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+  bottom: 0;
+  height: 8px;
+}
+.ps-container>.ps-scrollbar-y-rail {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  -moz-transition: background-color .2s linear, opacity .2s linear;
+  -o-transition: background-color .2s linear, opacity .2s linear;
+  transition: background-color .2s linear, opacity .2s linear;
+  right: 3px;
+  width: 8px;
+}
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;
+  -o-transition: background-color .2s linear;
+  transition: background-color .2s linear;
+  right: 0;
+  width: 8px;
+}
+.ps-container:hover.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container:hover>.ps-scrollbar-x-rail,
+.ps-container:hover>.ps-scrollbar-y-rail {
+  opacity: 0.6;
+}
+.ps-container:hover>.ps-scrollbar-x-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover>.ps-scrollbar-y-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y {
+  background-color: #999;
+}
+</style><script src="js/controller/forumCtrl.js" async=""></script><script src="js/controller/forumLayoutCtrl.js" async=""></script><script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js" async=""></script><script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js" async=""></script><script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=413321"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/slide_share.css?v=9c50d088.css"></head>
+
+	<body>
+		<!--<script src="js/plugin/canvas-nest/canvas-nest.min.js"></script>-->
+		<!-- uiView: index --><div ui-view="index" class="ng-scope" style=""><!-- begin #page-loader -->
+<!--<div id="page-loader" class="in"><span class="spinner"></span></div>-->
+<!-- end #page-loader -->
+
+<!-- begin #page-container -->
+<div id="page-container" class="page-header-fixed  ng-scope">
+
+	<!-- begin #header -->
+	<!-- ngInclude: 'templates/forum/layouts/header.html' --><div ng-include="'templates/forum/layouts/header.html'" class="ng-scope" style=""><div id="header" class="header navbar navbar-default navbar-fixed-top ng-scope">
+	<!-- begin container-fluid -->
+	<div class="container">
+		<!-- begin mobile sidebar expand / collapse button -->
+		<div class="navbar-header text-center">
+			<h1>
+				<a title="魔导网,只为发现未知的惊喜." ui-sref="forum.index.post.all.page" class="navbar-brand" href="http://mdwhat.com/forum/index///all/">
+					<img class="logo" alt="魔导网,只为发现未知的惊喜." src="img/logo-sm.png">
+					<span class="text-default">魔导社区
+					<span class="hidden-xs ng-binding" data-ng-bind="'- '+$state.current.data.pageTitle">- 哪些网站适合自学web前端开发？</span>
+					</span>
+				</a>
+			</h1>
+			
+			<ul class="nav navbar-nav navbar-right">
+			
+			<li>
+				<a ui-sref="home.index.site.common" href="http://mdwhat.com/home/index//common">导航</a>
+			</li>
+			
+			<!--消息end-->
+
+			<!-- ngIf: !$root.modaowangUser||!$root.modaowangUser.token --><li ng-if="!$root.modaowangUser||!$root.modaowangUser.token" class="ng-scope">
+				<span ui-draggable="true" ng-click="$root.openContentModal('loginModal','')" draggable="true">登录</span>
+			</li><!-- end ngIf: !$root.modaowangUser||!$root.modaowangUser.token -->
+			<!-- ngIf: $root.modaowangUser&&$root.modaowangUser.token -->
+
+		</ul>
+		<!-- end header navigation right -->
+			
+		</div>
+		<!-- end mobile sidebar expand / collapse button -->
+
+		<!-- begin header navigation right -->
+		
+	</div>
+	<!-- end container-fluid -->
+</div>
+<!-- end #header --></div>
+
+
+	<!-- begin #content -->
+	<div id="content" class="container" on-scroll-true="$root.settings.layoutForum.headerSearch.show">
+
+		
+
+		<!-- uiView: forum-content --><div ui-view="forum-content" class="ng-scope"><div class="row panel-group ng-scope">
+	<div class="col-xs-12 col-sm-6">
+		<h3 class="bold no-margin-top ng-binding">哪些网站适合自学web前端开发？</h3>
+
+	</div>
+	<div class="col-xs-12 col-sm-6 ">
+
+		<!-- ngIf: postDetail.type==0 --><h5 class="no-margin-top line-height-33 ng-scope" ng-if="postDetail.type==0" style="">
+			<!-- ngIf: !postDetail.awardedReplyId --><i ng-if="!postDetail.awardedReplyId" class="text-red fa fa-question-circle-o ng-scope"></i><!-- end ngIf: !postDetail.awardedReplyId -->
+			<!-- ngIf: postDetail.awardedReplyId -->
+			赏分:
+			<span class="text-red ng-binding">1</span>
+		</h5><!-- end ngIf: postDetail.type==0 -->
+		<!-- ngIf: postDetail.type==1 -->
+
+	</div>
+
+	<div class="col-xs-12">
+		<div class="avatar-left">
+			<img ui-sref="public.user-zone.favorite({userId:postDetail.userId})" ng-src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100" href="/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite" src="http://qzapp.qlogo.cn/qzapp/101369901/05A2F5034EB4AD401E6DC117589A56AB/100">
+			<h4>
+				<a ui-sref="public.user-zone.favorite({userId:postDetail.userId})" class="ng-binding" href="http://mdwhat.com/public/user-zone/e7296206bd9047fc8c73c4d08598b364/favorite">
+					<label class="no-margin">
+						
+					</label>
+					~追梦~
+				</a>
+				
+			</h4>
+			<p class="text-inline ng-binding">
+				2017-02-24 23:06:57
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<div class="post-content-panel">
+			<div class="text-free ng-binding" ng-bind-html="postDetail.content|trustHtml"><p>没有编程基础，想自学web前端，求推荐容易上手的前端学习网站？</p></div>
+			
+			
+					<div class="pull-right">
+						<button ng-click="postPraise(postDetail.id)" ng-class="{'btn-link-success':postDetail.userPraised}" class="btn btn-link">
+							<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':postDetail.userPraised,'fa-thumbs-o-up':!postDetail.userPraised}">
+								
+							</i>
+							赞<span class="ng-binding">(0)</span>
+							</button>
+						<button class="btn btn-link">
+								<i class="fa fa-comment-o"></i>
+								评论<span class="ng-binding">(1)</span>
+							</button>
+					</div>
+					<div class="clearfix"></div>
+			
+					<div text-angular="" ng-model="newParams.content" ta-toolbar="[
+									['insertLinkC', 'insertImageC', 'insertVideoC','uploadImage']
+									]" ta-html-editor-class="editor-sm" ta-text-editor-class="editor-sm" placeholder="输入评论..." ta-resize-force-aspect-ratio="true" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ta-root ng-empty"><div text-angular-toolbar="" name="textAngularToolbar5647686661686748" ta-toolbar="[
+									['insertLinkC', 'insertImageC', 'insertVideoC','uploadImage']
+									]" class="ng-scope ng-isolate-scope ta-toolbar btn-toolbar"><div class="btn-group"><button type="button" class="btn btn-default ng-scope" name="insertLinkC" ta-button="ta-button" ng-disabled="isDisabled()" tabindex="-1" ng-click="executeAction()" ng-class="displayActiveToolClass(active)" title="插入链接" unselectable="on" disabled="disabled"><i class="fa fa-link"></i></button><button type="button" class="btn btn-default ng-scope" name="insertImageC" ta-button="ta-button" ng-disabled="isDisabled()" tabindex="-1" ng-click="executeAction()" ng-class="displayActiveToolClass(active)" title="插入图片链接" unselectable="on" disabled="disabled"><i class="fa fa-picture-o"></i></button><button type="button" class="btn btn-default ng-scope" name="insertVideoC" ta-button="ta-button" ng-disabled="isDisabled()" tabindex="-1" ng-click="executeAction()" ng-class="displayActiveToolClass(active)" title="插入视频" unselectable="on" disabled="disabled"><i class="fa fa-youtube-play"></i></button><button type="button" class="btn btn-default ng-scope" name="uploadImage" ta-button="ta-button" ng-disabled="isDisabled()" tabindex="-1" ng-click="executeAction()" ng-class="displayActiveToolClass(active)" title="上传图片" unselectable="on" disabled="disabled"><i class="glyphicon glyphicon-upload"></i></button></div></div><div class="ta-scroll-window ng-scope ta-text ta-editor editor-sm" ng-hide="showHtml"><div class="popover fade bottom" style="max-width: none; width: 305px;"><div class="arrow"></div><div class="popover-content"></div></div><div class="ta-resizer-handle-overlay"><div class="ta-resizer-handle-background"></div><div class="ta-resizer-handle-corner ta-resizer-handle-corner-tl"></div><div class="ta-resizer-handle-corner ta-resizer-handle-corner-tr"></div><div class="ta-resizer-handle-corner ta-resizer-handle-corner-bl"></div><div class="ta-resizer-handle-corner ta-resizer-handle-corner-br"></div><div class="ta-resizer-handle-info"></div></div><div id="taTextElement5647686661686748" contenteditable="true" ta-bind="ta-bind" ng-model="html" placeholder="输入评论..." class="ng-pristine ng-untouched ng-valid ta-bind ng-empty placeholder-text"><p><br></p></div></div><textarea id="taHtmlElement5647686661686748" ng-show="showHtml" ta-bind="ta-bind" ng-model="html" placeholder="输入评论..." class="ng-pristine ng-untouched ng-valid ng-scope ta-bind ta-html ta-editor editor-sm ng-empty ng-hide"></textarea><input type="hidden" tabindex="-1" style="display: none;" name="textAngularEditor5647686661686748" value=""></div>
+
+					<div class="btn-group pull-right">
+						<button ng-click="clear()" class="btn btn-default">
+											清空
+										</button>
+						<button ng-click="submit()" class="btn btn-default text-green">
+											提交
+										</button>
+					</div>
+					<div class="clearfix"></div>
+		</div>
+		
+	</div>
+	<!--end post content-->
+
+</div>
+
+		<ul class="media-list row bg-light  ng-scope">
+			<!-- ngIf: params.total>0 --><li class="media row ng-scope" ng-if="params.total&gt;0" style="">
+				<div class="col-xs-12 text-center">
+					<!-- ngIf: $root.previous -->
+					
+					<ul ng-change="changePage()" uib-pagination="" total-items="params.total" ng-model="params.pageNum" items-per-page="params.pageSize" max-size="5" class="pagination-sm no-margin ng-pristine ng-untouched ng-valid ng-isolate-scope pagination ng-not-empty" boundary-link-numbers="true" rotate="false" previous-text="上一页" next-text="下一页"><!-- ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page - 1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">上一页</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page.number, $event)" ng-disabled="ngDisabled&amp;&amp;!page.active" uib-tabindex-toggle="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page + 1, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">下一页</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks -->
+</ul>
+				</div>
+			</li><!-- end ngIf: params.total>0 -->
+			<!-- uiView: post-detail-page --><div ui-view="post-detail-page" class="ng-scope"><!-- ngRepeat: reply in replyList|orderBy: '-createTime':false --><li class="media row ng-scope" ng-repeat="reply in replyList|orderBy: '-createTime':false" style="">
+	<div class="col-xs-12">
+		<div class="comment-item">
+			<a ui-sref="public.user-zone.favorite({userId:reply.userId})" class="avatar-left" href="http://mdwhat.com/public/user-zone/ed52dddbef6743d7925824f833cb27fd/favorite">
+				<img ng-src="/pub/image/ed52dddbef6743d7925824f833cb27fd/ed52dddbef6743d7925824f833cb27fd1487579051571.png" src="/pub/image/ed52dddbef6743d7925824f833cb27fd/ed52dddbef6743d7925824f833cb27fd1487579051571.png">
+
+			</a>
+			<div class="panel panel-default" ng-class="{'panel-success':reply.id==postDetail.awardedReplyId}">
+
+				<div class="panel-heading">
+					<!-- ngIf: reply.id==postDetail.awardedReplyId --> 
+					<a class="color-444 ng-binding" ui-sref="public.user-zone.favorite({userId:reply.userId})" href="http://mdwhat.com/public/user-zone/ed52dddbef6743d7925824f833cb27fd/favorite">xumingxin7398&nbsp;&nbsp;</a>
+					<span class="text-inline font-size-12 color-999 ng-binding">
+								2017-02-24 23:26:37
+							</span>
+					<!-- ngIf: reply.userId==$root.modaowangUser.user.userId -->
+					<!-- ngIf: reply.replyCount>0 -->
+				</div>
+				<div class="panel-body">
+					<div class="text-free ng-binding" ng-bind-html="reply.content|trustHtml"><p>1.<a href="http://www.w3school.com.cn/" target="_blank">w3school</a>，前端基础学习必备，学习顺序建议：html-&gt;css-&gt;javascript</p><p>2.<a href="http://www.imooc.com/course/list?c=fe" target="_blank">慕课网教程</a>，一边看教程一边学基础，效率更高</p><p>3.<a href="http://www.runoob.com/" target="_blank">菜鸟教程</a>，熟悉了基础后，可以接触一些前端框架，菜鸟教程javascript模块提供了多种前端框架的教程</p><p>4.<a href="http://www.w3cplus.com/" target="_blank">w3cplus</a>，帮助深入了解前端各种属性的使用，提供一些疑难杂症的解决技巧</p><p>5.<a href="https://www.w3ctech.com/" target="_blank">w3ctech</a>，关注前端最新资讯，第一时间掌握前端动态</p></div>
+
+					<!--子回复-->
+					<!-- ngRepeat: subReply in reply.subList|orderBy: '-createTime':false -->
+					<!--子回复-->
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="pull-right">
+								<!-- ngIf: postDetail.type==0&&!postDetail.awardedReplyId&&postDetail.userId==$root.modaowangUser.user.userId&&reply.userId!=$root.modaowangUser.user.userId -->
+
+								<button ng-class="{'btn-link-success':reply.userPraised,'btn-link-stable':!reply.userPraised}" ng-click="replyPraise($index)" class="btn btn-link btn-link-stable">
+							<i class="fa fa-thumbs-o-up" ng-class="{'fa-thumbs-up':reply.userPraised,'fa-thumbs-o-up':!reply.userPraised}"></i>
+							赞<span class="ng-binding">(0)</span>
+							</button>
+								<button class="btn btn-link btn-link-stable" ng-click="toggleGroup($index)">
+								<i class="fa fa-comment-o"></i>
+								回复<span class="ng-binding">(0)</span>
+							</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- ngIf: openGroup==$index -->
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+</li><!-- end ngRepeat: reply in replyList|orderBy: '-createTime':false --></div>
+
+			
+
+			<!-- ngIf: params.total>0 --><li class="media row ng-scope" ng-if="params.total&gt;0">
+				<div class="col-xs-12 text-center">
+					<ul ng-change="changePage()" uib-pagination="" total-items="params.total" ng-model="params.pageNum" items-per-page="params.pageSize" max-size="5" class="pagination-sm no-margin ng-pristine ng-untouched ng-valid ng-isolate-scope pagination ng-not-empty" boundary-link-numbers="true" rotate="false" previous-text="上一页" next-text="下一页"><!-- ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page - 1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">上一页</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page.number, $event)" ng-disabled="ngDisabled&amp;&amp;!page.active" uib-tabindex-toggle="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="http://mdwhat.com/forum/post-detail/97c4e13752ec483f8a0485e0df0a1bd5/" ng-click="selectPage(page + 1, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">下一页</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks -->
+</ul>
+				</div>
+			</li><!-- end ngIf: params.total>0 -->
+		</ul>
+</div>
+		
+
+		<!-- ngInclude: 'templates/forum/layouts/footer.html' --><div ng-include="'templates/forum/layouts/footer.html'" class="clearfix ng-scope" style=""><!--<div class="text-center text-free color-999">
+	&copy;2015-{{currentTime|date:'yyyy'}},深圳市友全科技有限公司,粤ICP备16120960号
+</div>-->
+<!--<div scroll-to-top class="btn btn-float">
+	<i class="glyphicon glyphicon-chevron-up"></i>
+</div>--></div>
+		
+		
+		<!-- ngRepeat: msg in $root.tips.message -->
+	</div>
+	<!-- end #content -->
+
+</div>
+<!-- end page container --></div>
+		
+		<script type="text/javascript" src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-resource/angular-resource.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/angular-native-dragdrop/draganddrop.min.js"></script>
+		<!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
+
+		<script src="node_modules/angular-perfect-scrollbar-2/dist/index.min.js"></script>
+		<script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular-rangy.min.js"></script>
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/textangular/dist/textAngular.min.js"></script>
+
+		<script type="text/javascript" src="js/plugin/angular-pinyin-translate/dist/angular-pinyin-translate.min.js"></script>
+		<!--<script src="js/plugin/ngImgCrop/ng-img-crop.min.js"></script>-->
+		
+		<!--<script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+		<script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>-->
+		
+		<script type="text/javascript" src="node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+		<script type="text/javascript" src="node_modules/ng-infinite-scroll/build/ng-infinite-scroll.min.js"></script>
+		
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/utils/directive.js"></script>
+		<script type="text/javascript" src="js/utils/filter.js"></script>
+		<script type="text/javascript" src="js/utils/utils.js"></script>
+
+		<script type="text/javascript" src="js/service/common.js"></script>
+		<script type="text/javascript" src="js/service/interceptor.js"></script>
+		<script type="text/javascript" src="js/service/apiService.js"></script>
+		<script type="text/javascript" src="js/service/storageH.js"></script>
+
+		<script type="text/javascript" src="js/controller/componentCtrl.js"></script>
+		<script type="text/javascript" src="js/controller/gameCtrl.js"></script>
+
+		<!--<script src="js/controller/homeLayoutCtrl.js"></script>
+		<script src="js/controller/homeCtrl.js"></script>-->
+		
+		<!--<script src="js/controller/forumLayoutCtrl.js"></script>
+		<script src="js/controller/forumCtrl.js"></script>-->
+
+		<!--<script src="js/controller/publicLayoutCtrl.js"></script>
+		<script src="js/controller/publicCtrl.js"></script>-->
+		
+		
+		<!--qq登录代码-->
+		<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101369901" data-redirecturi="http://mdwhat.com/public/login-redirect" charset="utf-8"></script><script src="http://qzonestyle.gtimg.cn/qzone/openapi/qc-1.0.1.js" type="text/javascript" data-appid="101369901" data-redirecturi="http://mdwhat.com/public/login-redirect" charset="utf-8"></script>
+		<!--baidu数据统计代码-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?eb514b12a1a58bb5daca1ce9b6880b46";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<!--百度分享代码-->
+		<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"魔导网，只为发现未知的惊喜。","bdMini":"1","bdMiniList":["weixin","sqq","qzone","tsina"],"bdPic":"http://mdwhat.com/img/logo-md.png","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"44"}};(document.getElementsByTagName('head')[0]||body).appendChild(document.createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5);</script>	
+		
+	
+	
+
+<iframe src="https://graph.qq.com/jsdkproxy/PMProxy.html#1.0.1" style="width: 0px; height: 0px; display: none; overflow: hidden;"></iframe><div class="bdshare-slide-button-box bdshare-slide-style-r4" style="top: 44px; width: 0px; z-index: 99999; right: 0px;" data-bd-bind="1487962727292"><a href="http://mdwhat.com/_23" onclick="return false;" class="bdshare-slide-button" style="left: -24px;"></a><div class="bdshare-slide-list-box" style="width: 0px; display: none;"><div class="bdshare-slide-top">分享到</div><div class="bdshare-slide-list"><ul class="bdshare-slide-list-ul" style="width: 116px;"></ul></div><div class="bdshare-slide-bottom" style="width: 116px;"><a href="http://mdwhat.com/_23" onclick="return false;" class="slide-more" data-cmd="more">更多...</a></div></div></div></body></html>

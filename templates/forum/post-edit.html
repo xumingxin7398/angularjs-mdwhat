@@ -1,0 +1,123 @@
+<form name="postForm" class="panel-body">
+	<uib-tabset class="row" active="params.type" justified="false">
+		<a ui-sref="forum.index.post.all" class="btn btn-success pull-right">
+			<i class="glyphicon glyphicon-chevron-left">
+			
+		</i>返回论坛
+		</a>
+
+		<uib-tab index="0" active="activeTab" select="changeTab(0)">
+			<uib-tab-heading>
+				发布找网
+			</uib-tab-heading>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6 input-group pull-left">
+						<span class="input-group-addon">
+						<i class="text-red fa fa-question-circle-o"></i> 
+						赏分
+					</span>
+						<input required="required" ng-min="1" min="1"  ng-model="params.bonusScore" type="number" class="form-control" 
+							placeholder="输入赏分,最少1分">
+							
+							<span class="input-group-addon">
+						
+						积分 {{$root.modaowangUser.user.score}}
+						<a class="color-999" ui-sref="public.score-explain" title="积分规则说明" target="_blank">
+							<i class="glyphicon glyphicon-info-sign">
+							</i>
+						</a>
+					</span>
+					</div>
+					
+					
+						
+					</div>
+					
+				</div>
+
+			</div>
+		</uib-tab>
+
+		<uib-tab index="1" active="activeTab" select="changeTab(1)">
+			<uib-tab-heading>
+
+				发布分享
+			</uib-tab-heading>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-6 input-group">
+						<span class="input-group-addon">
+						<i class="text-green fa fa-share-alt"></i>
+						地址
+					</span>
+						<input ng-model="params.urls" type="text" class="form-control" placeholder="输入要分享的网站地址">
+					</div>
+				</div>
+
+			</div>
+		</uib-tab>
+	</uib-tabset>
+
+		<div class="row form-group">
+			<div class="input-group">
+				<span class="input-group-addon">
+						标题
+					</span>
+				<input required="required" ng-model="params.title" type="text" class="form-control" placeholder="输入贴子标题">
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<div text-angular 
+				ng-model="params.content"
+				required="required"
+				placeholder="输入正文..."
+				ta-resize-force-aspect-ratio="true">
+				
+			</div>
+			
+		</div>
+		<div class="row">
+			<hr class="no-margin" />
+			<div class="panel panel-success topic-panel">
+				<div class="panel-heading">
+					分类标签
+					<div class="form-inline inline">
+						<div class="input-group">
+							<!--<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>-->
+							<input ng-model="categoryKeyword.inputText" ng-change="categoryFilt()" type="text" class="form-control" placeholder="分类关键字">
+						</div>
+					</div>
+
+					
+
+				</div>
+				<div class="panel-body">
+					<div class="radio">
+						<label>
+                        		<input ng-model="params.tags" type="radio" value="">
+                           	不限分类
+                    		</label>
+					</div>
+					<label class="radio-inline" ng-repeat="category in categoryList">
+                                <input type="radio" ng-model="params.tags" ng-value="category.name" >
+                                    {{category.name}}
+                        </label>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row form-group">
+			<div class="col-xs-6 col-sm-3">
+				<div ng-disabled="postForm.$invalid" ng-click="submit()" class="row btn btn-block btn-success">
+					提交
+				</div>
+			</div>
+		</div>
+
+</form>

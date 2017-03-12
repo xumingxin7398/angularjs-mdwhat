@@ -1,0 +1,45 @@
+<div class="panel panel-success">
+	<div class="panel-heading">
+		{{keyword}}-搜索结果:
+		<span class="color-999">
+					
+					<b >{{siteCount||0}}</b>
+					个网站
+				</span> ,
+		<span class="color-999">
+					
+					<b>{{postCount['-1']||0}}</b>
+					个帖子
+				</span>
+
+	</div>
+	<div class="panel-body">
+		
+		<ul class="nav nav-tabs">
+	<li ui-sref-active="active" >
+		<a ui-sref="home.index.search.site">
+			相关网站({{siteCount||0}})
+		</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="home.index.search.post">
+			相关帖子({{postCount['-1']||0}})
+		</a>
+	</li>
+
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="home-search-site" ng-show="$state.includes('home.index.search.site')">
+			
+		</div>
+		<div ui-view="home-search-post" ng-show="$state.includes('home.index.search.post')">
+			
+		</div>
+	
+</div>
+		
+		
+
+	</div>
+</div>

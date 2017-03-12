@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<h4 class="modal-title">插入图片链接</h4>
+</div>
+
+<div class="modal-body text-center">
+	<form name="ImageForm" class="margin-bottom-0">
+					<div class="form-group input-group">
+						<span class="input-group-addon">
+				地址
+			</span>
+						<input ng-enter="ok()"  ng-model="params.url" type="text" required="required" class="form-control input-lg" placeholder="输入url地址">
+					</div>
+					
+
+					
+
+				</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-success" type="button" ng-click="ok()">确定</button>
+	<button class="btn btn-danger" type="button" ng-click="cancel()">退出</button>
+</div>

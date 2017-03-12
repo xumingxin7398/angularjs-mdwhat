@@ -1,0 +1,54 @@
+
+<div ng-if="contentHeader.show" drop-channel="site" ui-on-drop="onCommonDrop($data,$event)" class="row content-header-panel">
+	<div class="col-xs-12 padding-vertical-5">
+		<div class="col-xs-5">
+			<button ng-click="$root.openContentModal('newCommonModal','')" class="btn btn-link btn-link-stable no-padding-horizontal">
+							<i class="iconfont"></i>
+							<i class="fa fa-plus-circle"></i>
+							添加网站
+						</button>
+		</div>
+		<!--<div class="col-xs-7">
+			<a ui-sref="public.common" class="btn btn-link btn-link-success pull-right">
+				<i class="glyphicon glyphicon-resize-full"></i>
+			</a>
+			<button ng-click="$root.openContentModal('commonModal')" type="button" class="btn btn-link btn-link-success pull-right no-padding-horizontal">
+							<i class="iconfont icon-tuijian"></i>
+							推荐常用
+						</button>
+
+		</div>-->
+	</div>
+	<div class="col-xs-12" dnd-list="commonList" dnd-horizontal-list="true" dnd-inserted="onCommonDndInserted(event, index, item, external)">
+
+		<div class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in commonList | orderBy:'sortIndex':false" dnd-draggable="site" dnd-moved="commonList.splice($index, 1);" dnd-effect-allowed="copyMove">
+			<div class="box">
+				<a ng-href="{{site.url}}" target="_blank" class="box-thumbnail">
+
+					
+					<div class="box-img">
+						<img ng-src="{{site.favicon}}" />
+					</div>
+					<h5 title="{{site.url}}">{{site.siteName}}</h5>
+				</a>
+				<div class="box-menu btn-group">
+						<button title="添加到收藏" ng-click="$root.openContentModal('selectFavoriteModal','',site,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-star">
+								</i>
+							</button>
+						<button title="删除常用" ng-click="delCommon(site.siteId,$event)" type="button" class="btn btn-default">
+								<i class="fa fa-close">
+									</i>
+							</button>
+
+					</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="content-header-line">
+	<span class="line-circle" ng-click="contentHeader.toggle()">
+				<i class="fa fa-heart"></i>
+			</span>
+</div>

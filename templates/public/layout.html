@@ -1,0 +1,36 @@
+<!-- begin #page-loader -->
+<!--<div id="page-loader" class="in"><span class="spinner"></span></div>-->
+<!-- end #page-loader -->
+
+<!-- begin #page-container -->
+<div id="page-container" class="page-header-fixed ">
+
+	<!-- begin #header -->
+	<div ng-include="'templates/public/layouts/header.html'">
+	</div>
+
+
+	<!-- begin #content -->
+	<div id="content" class="container" on-scroll-true="$root.settings.layoutpublic.headerSearch.show">
+
+		
+
+		<div ui-view="public-content">
+
+		</div>
+		
+
+		<div ng-include="'templates/public/layouts/footer.html'" class="clearfix">
+		</div>
+		
+		
+		<div uib-alert ng-repeat="msg in $root.tips.message" 
+			dismiss-on-timeout="{{msg.duration}}" 
+			class="text-center content-tips content-tips-center" ng-class="'alert-' + (msg.type || 'success')" close="$root.tips.close($index)">
+			{{msg.text}}
+		</div>
+	</div>
+	<!-- end #content -->
+
+</div>
+<!-- end page container -->

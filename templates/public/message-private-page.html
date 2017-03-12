@@ -1,0 +1,42 @@
+<p class="color-999" ng-if="!messageList||messageList.length==0">
+	暂无数据
+</p>
+<li  class="media row post-item" ng-repeat="message in messageList|orderBy: '-createTime':false">
+	<div class="col-xs-12">
+		<div class="avatar-left">
+			<img ui-sref="public.user-zone.favorite({userId:message.userId})" ng-src="{{message.userIcon||'img/user-icon.jpg'}}" />
+			<h4>
+							<a ui-sref="public.user-zone.favorite({userId:message.userId})">
+								
+								{{message.nickName||message.userName}}
+							</a>
+				
+						</h4>
+			<p class="text-inline">{{message.createTime|date:'yyyy-MM-dd HH:mm:ss'}}</p>
+
+		</div>
+		<div ui-sref="public.user-chat.page({userId:message.userId})" class="post-content-panel media-list border-ddd cursor-pointer">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="text-free" ng-bind-html="message.content|trustHtml">
+
+					</div>
+
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="pull-right">
+
+						<a ui-sref="public.user-chat.page({userId:message.userId})" class="btn btn-link btn-link-stable" ng-click="toggleGroup($index)">
+							查看
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</li>

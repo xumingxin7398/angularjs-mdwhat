@@ -1,0 +1,23 @@
+<div class="row" ng-if="commonList&&commonList.length>0">
+	<div ng-if="!site.userFollowed" class="box-col col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="site in commonList track by $index">
+		<div class="box">
+			<a ng-href="{{site.url}}" target="_blank"  class="box-thumbnail">
+
+				
+				<div class="box-img" tooltip-placement="bottom-left" uib-tooltip="{{site.description}}" tooltip-popup-close-delay="500">
+					<img ng-src="{{site.favicon}}" />
+				</div>
+
+				<h5 title="{{site.url}}">{{site.siteName}}</h5>
+			</a>
+			<div class="box-menu btn-group">
+					<button title="添加到常用" ng-if="!site.userFollowed" ng-click="addCommonSite($index,$event)" type="button" class="btn btn-default">
+							<i class="fa fa-heart">
+								</i>
+							</button>
+
+				</div>
+		</div>
+	</div>
+
+</div>

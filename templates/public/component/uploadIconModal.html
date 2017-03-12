@@ -1,0 +1,33 @@
+<div class="modal-header">
+	<h4 class="modal-title">头像上传</h4>
+</div>
+
+<div class="modal-body text-center">
+	<div class="form-group">
+
+		<input id="uploadIconInput" class="form-control" type="file" />
+	</div>
+	 
+	<div class="row">
+		<div class="col-xs-8 text-center">
+
+				<div style="width: 100%;height: 300px;" class="thumbnail">
+					<img-crop image="uploadImage" result-image-size="128" result-image="croppedImage" result-image-format="image/png">
+						
+					</img-crop>
+				</div>
+
+		</div>
+		<div class="col-xs-4">
+				<div class="thumbnail no-margin">
+					<img ng-src="{{croppedImage}}" />
+				</div>
+				<div class="text-center color-999">预览</div>
+		</div>
+
+	</div>
+
+	<div class="modal-footer">
+		<button class="btn btn-success" type="button" ng-click="ok()">确定</button>
+		<button class="btn btn-danger" type="button" ng-click="cancel()">取消</button>
+	</div>

@@ -1,0 +1,131 @@
+<div class="row">
+	<div class="col-xs-12 ">
+		<hr class="no-margin" />
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				{{userInfo.userName||userInfo.nickName}}
+				<a ng-href="javascript:void(0)" ng-click="$root.openContentModal('editProfileModal','',userInfo,$event)" class="pull-right">
+					<i class="glyphicon glyphicon-pencil"></i>编辑
+				</a>
+
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-4 col-sm-3 col-md-2 text-center">
+						<a ng-href="javascript:void(0)" class="thumbnail no-margin">
+							<img ng-src="{{croppedImage||userInfo.icon||'img/user-icon.jpg'}}" />
+						</a>
+
+						<button ng-click="openUploadIconModal()" class="btn btn-block btn-sm btn-default">
+							更换头像
+						</button>
+					</div>
+
+					<div class="col-xs-8 col-sm-9 col-md-10 color-999 font-size-13">
+						<div class="row">
+							<div class="col-xs-6">
+								昵称
+								<span class="color-666 font-size-14">
+									{{userInfo.nickName}}
+								</span>
+
+							</div>
+							<div class="col-xs-6">
+								积分
+								<span class="color-666 font-size-14">
+									{{userInfo.score}}
+								</span>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								性别
+								<span class="color-666 font-size-14" ng-if="userInfo.gender!=null">
+									{{userInfo.gender?'女':'男'}}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+
+								年龄
+								<span class="color-666 font-size-14">
+									{{userInfo.age}}
+								</span>
+							</div>
+
+						</div>
+
+						
+						<div class="row">
+							<div class="col-xs-12">
+								职业
+								<span class="color-666 font-size-14" >
+									{{userInfo.occupation}}
+								</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								邮箱
+								<span class="color-666 font-size-14">
+									{{userInfo.email}}
+								</span>
+								
+								<a ng-href="javascript:void(0);" ng-click="$root.openContentModal('emailModal','')" 
+								 class="pull-right color-999">
+									验证<i class="padding-horizontal-5 glyphicon glyphicon-envelope"></i>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								地址
+								<span class="color-666 font-size-14">
+									<!--{{userInfo.province}}
+								{{userInfo.city}}
+								{{userInfo.strict}}-->
+								{{userInfo.addressDetail}}
+								</span>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								简介
+								<span class="color-666 font-size-14">
+									{{userInfo.introduce}}
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<ul class="nav nav-tabs">
+	<li ui-sref-active="active" >
+		<a ui-sref="public.user-profile.prize">获奖记录({{prizeCount||0}})</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="public.user-profile.post">帖子({{postCount['-1']||0}})</a>
+	</li>
+	
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="user-profile-prize" ng-show="$state.includes('public.user-profile.prize')">
+			
+		</div>
+		<div ui-view="user-profile-post" ng-show="$state.includes('public.user-profile.post')">
+			
+		</div>
+	
+	
+</div>
+
+

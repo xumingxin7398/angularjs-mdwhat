@@ -1,0 +1,77 @@
+<p class="color-999" ng-if="!postList||postList.length==0">
+	暂无数据
+</p>
+<li class="media row post-item" ng-repeat="post in postList|orderBy: '-createTime':false">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="avatar-left">
+						<img ui-sref="public.user-zone.favorite({userId:post.userId})" ng-src="{{post.userIcon||'img/user-icon.jpg'}}" />
+						<h4>
+							<a ui-sref="forum.post-detail.page({postId:post.id})">
+								<span class="color-999 no-margin">
+									[{{post.tags?post.tags:'不限分类'}}]
+								</span>
+							{{post.title}}
+							</a>
+							
+							<span ng-if="post.userId==$root.modaowangUser.user.userId" class="pull-right">
+								<a class="color-999 padding-horizontal-5" ng-click="$root.editPost(post.id,$event)" ng-href="javascript:void(0);">
+									<i class="glyphicon glyphicon-pencil"></i>
+								</a>
+								<a class="color-999 padding-horizontal-5" ng-click="$root.delPost(post.id,$event)" ng-href="javascript:void(0);">
+									<i class="fa fa-trash"></i>
+								</a>
+							</span>
+						</h4>
+						<p class="text-free">{{post.content}}</p>
+						
+						
+					
+					</div>
+					
+					
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="row color-999 ">
+						<div class="col-xs-7 text-inline text-left">
+							<a ng-href="{{post.urls}}" target="_blank" ng-if="post.type==1" class="color-999" title="{{post.urls}}" >
+								<i class="text-green fa fa-share-alt"></i>
+								{{post.urls}}
+							</a>
+							<a ui-sref="forum.post-detail.page({postId:post.id})" ng-if="post.type==0" class="color-999" >
+								<i ng-if="!post.awardedReplyId" class="text-red fa fa-question-circle-o"></i>
+								<i ng-if="post.awardedReplyId" class="text-green fa fa-check-circle-o"></i>
+								{{post.bonusScore||0}}赏分
+							</a>
+
+						</div>
+						<div class="col-xs-5 text-inline text-right">
+							
+							<span class="margin-right-less cursor-pointer" ng-click="$root.praisePost(post)">
+								<i class="fa" ng-class="{'fa-thumbs-up':post.userPraised,'fa-thumbs-o-up':!post.userPraised}"></i>
+							({{post.praiseCount||0}})
+							</span>
+							<span ui-sref="forum.post-detail.page({postId:post.id})">
+								<i class="fa fa-comment-o"></i>
+							({{post.replyCount||0}})
+							</span>
+
+						</div>
+					</div>
+					<div class="row color-999 ">
+
+						<div class="col-xs-6 text-inline text-left">
+							<a class="color-999" target="_blank" ui-sref="public.user-zone.favorite({userId:post.userId})">
+								<i class="glyphicon glyphicon-user"></i>
+								{{post.nickName||post.userName}}	
+							</a>
+							
+						</div>
+						<div class="col-xs-6 text-inline text-right">
+							{{post.createTime|date:'yyyy-MM-dd HH:mm'}}
+
+						</div>
+					</div>
+				</div>
+
+			</li>

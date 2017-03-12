@@ -1,0 +1,141 @@
+<script type="text/ng-template" id="categoryPopover.html">
+	<div class="row no-margin-bottom panel panel-success topic-panel">
+			<div class="panel-heading">
+				分类标签
+				<div class="form-inline inline">
+					<div class="input-group">
+						<!--<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>-->
+						<input ng-model="categoryKeyword.inputText" ng-change="categoryFilt()" type="text" class="form-control" placeholder="分类关键字">
+					</div>
+				</div>
+
+			
+
+			</div>
+			<div class="panel-body">
+				<div class="checkbox">
+					<label>
+                        <input ng-model="noSelected.check" ng-change="selectTags(true,false)" type="checkbox" value="">
+                           	不限分类
+                    </label>
+				</div>
+				<label class="checkbox-inline" ng-repeat="category in categoryList">
+		           <input ng-change="selectTags()" ng-model="category.selected" ng-value="category.name" type="checkbox" />
+		             {{category.name}}
+		        </label>
+				<div class="form-group">
+					<button ng-click="changeUrl(false,false)" class="btn btn-success pull-right">
+						确定
+					</button>
+				</div>
+			</div>
+		</div>
+</script>
+<div class="row panel-group">
+
+	<div class="col-sm-6 col-xs-12">
+		<div class="input-group">
+
+			<!-- /btn-group -->
+			<input type="text" ng-enter="changeUrl()" ng-model="params.keyword" class="form-control " placeholder="Search for... ">
+			<span class="input-group-btn ">
+        					<button ng-click="changeUrl()" class="btn btn-primary " type="button ">
+        					搜帖
+        					</button>
+     			 		</span>
+		</div>
+	</div>
+	<div class="col-sm-6 hidden-xs">
+		<div class="input-group padding-vertical-8">
+			热搜：
+			<a ui-sref="forum.index.post.all({keyword:'神器'})" class="padding-horizontal-10">神器</a>
+			<a ui-sref="forum.index.post.all({keyword:'电影'})" class="padding-horizontal-10">电影</a>
+			<a ui-sref="forum.index.post.all({keyword:'素材'})" class="padding-horizontal-10">素材</a>
+		</div>
+
+	</div>
+	
+</div>
+<hr class="margin-vertical-10"/>
+<div class="row">
+	<div class="col-sm-12 hidden-xs">
+		<hr class="no-margin" />
+		<div class="panel panel-success topic-panel">
+			<div class="panel-heading">
+				分类标签
+				<div class="form-inline inline">
+					<div class="input-group">
+						<!--<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>-->
+						<input ng-model="categoryKeyword.inputText" ng-change="categoryFilt()" type="text" class="form-control" placeholder="分类关键字">
+					</div>
+				</div>
+
+			
+
+			</div>
+			<div class="panel-body">
+				<div class="checkbox">
+					<label>
+                        <input ng-model="noSelected.check" ng-change="selectTags(true,true)" type="checkbox" value="">
+                           	不限分类
+                    </label>
+				</div>
+				<label class="checkbox-inline" ng-repeat="category in categoryList">
+		           <input ng-change="selectTags(false,true)" ng-model="category.selected" ng-value="category.name" type="checkbox" />
+		             {{category.name}}
+		        </label>
+
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+		<div class="form-group form-popover">
+			<button class="btn btn-default" uib-popover-template="'categoryPopover.html'"  popover-placement="bottom-left" popover-trigger="'outsideClick'">
+			分类标签
+			</button>
+			<span class="text-free color-999">
+				{{params.tags||'不限分类'}}
+			</span>
+		</div>
+		
+	</div>
+</div>
+<ul class="nav nav-tabs">
+	<li ui-sref-active="active" >
+		<a ui-sref="forum.index.post.all">全部({{postCount['-1']||0}})</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="forum.index.post.request">找网贴({{postCount['0']||0}})</a>
+	</li>
+	<li ui-sref-active="active" >
+		<a ui-sref="forum.index.post.share">分享贴({{postCount['1']||0}})</a>
+	</li>
+	<a ui-sref="forum.post-edit" class="btn btn-success pull-right position-right">
+		<i class="glyphicon glyphicon-plus">
+			
+		</i>
+		<span class="hidden-xs">创建贴子</span>
+	</a>
+</ul>
+<div class="tab-default tab-content">
+	
+	<div ui-view="forum-post-all" ng-show="$state.includes('forum.index.post.all')">
+			
+		</div>
+		<div ui-view="forum-post-request" ng-show="$state.includes('forum.index.post.request')">
+			
+		</div>
+	<div ui-view="forum-post-share" ng-show="$state.includes('forum.index.post.share')">
+			
+		</div>
+	
+</div>
+
+
+
