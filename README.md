@@ -2,6 +2,8 @@
 
 a complete project using angularjs. 魔导网-发现优秀的网站
 
+Live demo [http://mdwhat.com](http://mdwhat.com)
+
 # usage
 
 git clone https://github.com/xumingxin7398/angularjs-mdwhat.git
