@@ -107,34 +107,4 @@ angular.module('modaowang')
 			}
 		}
 	}])
-	/*.directive('uibDropdownInput', ['$rootScope', function($rootScope) {
-		return {
-			restrict: "AE",
-			link: function(scope, element, attr) {
-				element.on('focus', function(e) {
-					var uibDropdown = element.parent();
-					if(!uibDropdown.hasClass("open") && element[0].value) {
-						uibDropdown.addClass("open");
-					}
-				});
-				element.on('keyup', function(e) {
-					var uibDropdown = element.parent();
-					if(!uibDropdown.hasClass("open") && element[0].value) {
-						uibDropdown.addClass("open");
-					}
-					if(uibDropdown.hasClass("open") && !element[0].value) {
-						uibDropdown.removeClass("open");
-					}
-				});
-				element.on('blur', function(e) {
-					var uibDropdown = element.parent();
-					if(uibDropdown.hasClass("open")) {
-						uibDropdown.removeClass("open");
-					}
-				});
-
-			}
-		}
-	}])*/
-	
 ;

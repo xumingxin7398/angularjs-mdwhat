@@ -216,7 +216,7 @@ angular.module('modaowang')
 			]);
 
 			//请求拦截器和过滤器
-			//$locationProvider.html5Mode(true);
+			/*$locationProvider.html5Mode(true);*/
 			$httpProvider.interceptors.push('httpInterceptor');
 
 			$sceDelegateProvider.resourceUrlWhitelist([
@@ -253,8 +253,8 @@ angular.module('modaowang')
 								files: [
 
 									"js/controller/homeCtrl.js",
-									"js/controller/homeLayoutCtrl.js"
-
+									"js/controller/homeLayoutCtrl.js",
+									"js/plugin/baidu/opensug.js"
 								]
 							}
 

@@ -355,7 +355,10 @@ angular.module('modaowang')
 					userId: userId
 				}).then(function(data) {
 					if(!data.errCode) {
-						data.data.icon=data.data.icon.replace('.','-lg.');
+						if(data.data.icon&&data.data.icon.startsWith('/')){
+							data.data.icon=data.data.icon.replace('.','-lg.');
+						}
+						
 						$scope.userInfo = data.data;
 					}
 				});

@@ -7,13 +7,6 @@ angular.module('modaowang')
 			return $sce.trustAsHtml(input);
 		}
 	})
-	.filter('trustJs', function($sce) {
-
-		return function(input) {
-
-			return $sce.trustAsJs(input);
-		}
-	})
 	.filter('pinyinFilter', function() {
 		return function(data, keyword) {
 			var result = [];

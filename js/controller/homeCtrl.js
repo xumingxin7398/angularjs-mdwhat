@@ -1,7 +1,7 @@
 'use strict';
 angular.module('modaowang')
-	.controller('homeCtrl', ['$scope', '$rootScope', 'apiService',  '$stateParams', '$state','utils',
-		function($scope, $rootScope, apiService,  $stateParams, $state,utils) {
+	.controller('homeCtrl', ['$scope', '$rootScope', 'apiService',  '$stateParams', '$state','utils','$window','$timeout',
+		function($scope, $rootScope, apiService,  $stateParams, $state,utils,$window,$timeout) {
 			
 			//四个tab菜单和跳转
 			//content-header menu
@@ -11,6 +11,28 @@ angular.module('modaowang')
 					this.show = !this.show;
 				}
 			};
+			if(document.getElementById("searchInput")!=null){
+						BaiduSuggestion.bind(
+						document.getElementById("searchInput"),
+							{
+							    "XOffset": 0,
+							    "YOffset": 0,
+							    "width": 220,
+							    "fontColor": "#666",
+							    "fontColorHI": "#3385ff",
+							    "fontSize": "12px",
+							    "borderColor": "#dddddd",
+							    "bgcolorHI": "#eeeeee",
+							    "sugSubmit": false
+							}, 
+							function(sugStr){
+								$scope.search.keyword=sugStr;
+								$scope.search.bdSearch();
+							});
+					}
+					
+					
+				
 			
 			$scope.search = {
 				keyword: $state.params.keyword || "",
@@ -22,11 +44,18 @@ angular.module('modaowang')
 						keyword: keyword
 					});
 				},
-				bdSearch: function() {
+				bdSearch: function(e) {
+					if(e){
+						e.stopPropagation();
+					}
 					var data = BaiduHttps.useHttps();
 					
 					var keyword = utils.scriptFilt(this.keyword);
-					var url = 'http://www.baidu.com/baidu' + '?ssl_s=1&ssl_c=' + data.ssl_code + '&tn='+'SE_zzsearchcode_shhzc78w'+'&word='+keyword;
+					var host='http://www.baidu.com/baidu';
+					if($window.innerWidth<768){
+						host='http://m.baidu.com/s';
+					}
+					var url =host + '?ssl_s=1&ssl_c=' + data.ssl_code + '&tn='+'SE_zzsearchcode_shhzc78w'+'&word='+keyword;
 					if(!window.open(url, "_blank")) {
 						window.location.href = url;
 					}

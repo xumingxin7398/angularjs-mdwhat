@@ -5,6 +5,7 @@ angular.module('modaowang')
 		function($scope, $rootScope, $uibModal, $log, apiService, storageH, $state,
 			 $pinyinTranslate, utils) {
 				
+			
 			//sidebar category
 			//todo,给category数据库添加关键字字段，用来更精确定位分类。
 			$rootScope.categoryLocal = {

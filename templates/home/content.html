@@ -40,25 +40,8 @@
         					</button>
      			 		</span>
      		
-			<input type="text" ng-enter="search.bdSearch()" ng-model="search.keyword" focus-me-pc class="form-control" placeholder="输入关键字..." />
-			<!--<div uib-dropdown keyboard-nav style="height: 34px;">
-				<input type="text" ng-enter="search.toSearch()" ng-model="search.keyword" uib-dropdown-input class="form-control" placeholder="输入关键字..." />
-				<ul class="dropdown-menu" uib-dropdown-menu>
-					<li>
-						<a ng-href="javascript:void(0)">百度(100)</a>
-					</li>
-					<li>
-						<a ng-href="javascript:void(0)">搜狗(50)</a>
-					</li>
-					<li>
-						<a ng-href="javascript:void(0)">知乎(20)</a>
-					</li>
-					<li role="separator" class="divider"></li>
-					<li>
-						<a ng-href="javascript:void(0)">维基(1000)推荐</a>
-					</li>
-				</ul>
-			</div>-->
+			<input id="searchInput" type="text" ng-enter="search.bdSearch($event)" ng-model="search.keyword" focus-me-pc class="form-control" placeholder="输入关键字..." />
+			
 
 			<span class="input-group-btn ">
         					<button ng-click="search.bdSearch()" class="btn btn-primary " type="button ">
