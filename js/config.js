@@ -2,11 +2,11 @@
 angular.module('modaowang')
 	.service('appConfig', ['$rootScope', function($rootScope) {
 		var appConfig = {
-			//host: 'localhost',
+			host: 'localhost',
 			//host: '120.24.92.233',
-			host: 'mdwhat.com',
+			//host: 'mdwhat.com',
 			port: '80',
-			appId:''
+			appId:'mdwhat.com'
 		};
 		$rootScope.appConfig = appConfig;
 		return appConfig;
@@ -216,7 +216,7 @@ angular.module('modaowang')
 			]);
 
 			//请求拦截器和过滤器
-			/*$locationProvider.html5Mode(true);*/
+			$locationProvider.html5Mode(true);
 			$httpProvider.interceptors.push('httpInterceptor');
 
 			$sceDelegateProvider.resourceUrlWhitelist([
@@ -254,7 +254,7 @@ angular.module('modaowang')
 
 									"js/controller/homeCtrl.js",
 									"js/controller/homeLayoutCtrl.js",
-									"js/plugin/baidu/opensug.js"
+									"http://www.baidu.com/js/opensug.js"
 								]
 							}
 
