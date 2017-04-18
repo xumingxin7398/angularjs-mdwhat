@@ -14,7 +14,7 @@ angular.module('modaowang')
 				id: 0,
 				isHot: false,
 				isNew: false,
-				name: "所有分类",
+				name: "分类热门",
 				parentId: 0,
 				sortIndex: 0,
 				status: true

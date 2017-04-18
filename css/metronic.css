@@ -336,7 +336,7 @@ label {
 	padding-top: 54px;
 	background: #fff;
 	z-index: 1010;
-	border-right: 1px solid #ddd;
+	border-right: 1px solid #f2f2f2;
 	-webkit-transform: translateZ(0)
 }
 
@@ -399,7 +399,7 @@ label {
 .sidebar .nav>li>a:hover {
 	color: #46C01B;
 	font-weight: bold;
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 }
 
 
@@ -562,8 +562,8 @@ label {
 .sidebar .nav>li.nav-profile {
 	padding: 15px;
 	color: #fff;
-	border-bottom: 1px solid #ddd;
-	background-color: #F2F2F2;
+	border-bottom: 1px solid #f2f2f2;
+	background-color: #f5f5f5;
 }
 
 .sidebar .nav>li.nav-profile a {

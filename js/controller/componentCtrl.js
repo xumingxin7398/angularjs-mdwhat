@@ -27,7 +27,12 @@ angular.module('modaowang')
 			};
 			$scope.login = function() {
 				$scope.params.user.password = utils.md5($scope.params.user.inputPassword);
-				apiService.userLogin($scope.params.user).then(function(data) {
+				apiService.userLogin(
+					{
+						userName:$scope.params.user.userName,
+						password:$scope.params.user.password,
+					}
+				).then(function(data) {
 					if(!data.errCode) {
 						$scope.params.user.inputPassword = "";
 						storageH.setUser(data.data);

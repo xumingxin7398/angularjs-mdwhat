@@ -361,9 +361,9 @@ div[dnd-list], div[dnd-list] ul li {
 
 .tab-default>.tab-content,.tab-default.tab-content{
 	background-color: #fff;
-	border-bottom: 1px solid #e2e2e2;
-	border-left: 1px solid #e2e2e2;
-	border-right: 1px solid #e2e2e2;
+	border-bottom: 1px solid #f2f2f2;
+	border-left: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
 	padding-bottom: 15px;
 	
 	position: relative;
@@ -596,7 +596,7 @@ li.content-header-menu span:active:after {
 
 .box .tooltip-inner,.tooltip-inner{
 	max-width: 300px;
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     color: #777;
     border-top: 1px solid #f2f2f2; 
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.2);
@@ -626,17 +626,15 @@ li.content-header-menu span:active:after {
 	text-align: left;
 	color: #666;
 	background-color: #fff;
-	box-shadow: 0 0 1px 0px rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-	/*box-shadow: 0 1px 1px 0px rgba(0,0,0,0.1), 0 1px 3px 0 rgba(0,0,0,0.1);*/
+	/*box-shadow: 0 0 1px 0px rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);*/
 	box-sizing: border-box;
-	/*border-top: 1px solid #f2f2f2;*/
 	position: relative;
 	padding-left: 36px;
 }
 
 .box .box-thumbnail:hover {
 	text-decoration: none;
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.2);
 	/*box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2);*/
 	cursor: pointer;
@@ -672,6 +670,7 @@ li.content-header-menu span:active:after {
 	width: 16px;
 	height: 16px;
 	vertical-align: baseline;
+	border-radius: 50%;
 }
 a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover{
 	border-color: #ddd;
@@ -727,7 +726,7 @@ a.thumbnail:hover>.box-menu{
 }
 
 .progress-green progress[value]::-webkit-progress-bar {
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 }
 
 .progress-green progress[value]::-webkit-progress-value {
@@ -836,7 +835,7 @@ a.thumbnail:hover>.box-menu{
 }
 
 .media-list .media.post-item:hover {
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 }
 
 .media-list.border-eee .media {
@@ -983,6 +982,9 @@ a.thumbnail:hover>.box-menu{
 .panel-heading {
 	position: relative;
 	border-radius: 0 !important;
+}
+.panel-default>.panel-heading,.panel-default{
+	border-color: #f2f2f2 !important;
 }
 .panel-heading>h3{
 	font-size: 14px;
@@ -1211,7 +1213,7 @@ a.thumbnail:hover>.box-menu{
 	background-color: #fff;
 }
 .bg-stable {
-	background-color: #f2f2f2;
+	background-color: #f5f5f5;
 }
 .border-after-eee:after{
 	content:'';
