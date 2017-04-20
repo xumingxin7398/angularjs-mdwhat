@@ -15,7 +15,7 @@ angular.module('modaowang')
 						params.userId = userInfo.user.userId
 					}
 				};
-				params.request_time = new Date().getTime();
+				params.requestTime = new Date().getTime();
 				return params;
 			};
 			//header参数处理------------------
