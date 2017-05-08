@@ -92,21 +92,21 @@ angular.module('modaowang')
 			this.userIconUrl = this.serverUrl + "/api/user-info/upload-icon";
 			this.categoryAll = function(params, config) {
 				var api = "/api/category/all";
-				return this.c_get(api, params, config);
+				return this.c_post(api, params, config);
 			};
 
 			this.categoryChild = function(params, config) {
 				var api = "/api/category/child";
-				return this.c_get(api, params, config);
+				return this.c_post(api, params, config);
 			};
 
 			this.categorySiteGroup = function(params, config) {
 				var api = "/api/category-site/group";
-				return this.c_get(api, params, config);
+				return this.c_post(api, params, config);
 			};
 			this.categorySiteGroupPage = function(params, config) {
 				var api = "/api/category-site/group-page";
-				return this.c_get(api, params, config);
+				return this.c_post(api, params, config);
 			};
 
 			this.siteAll = function(params, config) {
