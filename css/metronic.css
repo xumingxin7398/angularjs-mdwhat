@@ -413,7 +413,7 @@ label {
 	display: block;
 	
 }
-.sidebar .nav>li>a>.btn{
+.sidebar .nav>li>a>.btn,.sidebar .nav>li>a+.btn{
 	visibility: hidden;
 	opacity: 0;
 	padding:0 8px;

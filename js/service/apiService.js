@@ -74,8 +74,7 @@ angular.module('modaowang')
 				var allParams = this.handleParams(params);
 				var allConfig = this.handleConfig(httpConfig);
 				var url = this.serverUrl + api;
-
-				$http.get(url, allParams, allConfig).success(
+				$http.get(url, {params:allParams,headers:allConfig.headers}).success(
 					function(data) {
 						deferred.resolve(data);
 					}
@@ -93,21 +92,21 @@ angular.module('modaowang')
 			this.userIconUrl = this.serverUrl + "/api/user-info/upload-icon";
 			this.categoryAll = function(params, config) {
 				var api = "/api/category/all";
-				return this.c_post(api, params, config);
+				return this.c_get(api, params, config);
 			};
 
 			this.categoryChild = function(params, config) {
 				var api = "/api/category/child";
-				return this.c_post(api, params, config);
+				return this.c_get(api, params, config);
 			};
 
 			this.categorySiteGroup = function(params, config) {
 				var api = "/api/category-site/group";
-				return this.c_post(api, params, config);
+				return this.c_get(api, params, config);
 			};
 			this.categorySiteGroupPage = function(params, config) {
 				var api = "/api/category-site/group-page";
-				return this.c_post(api, params, config);
+				return this.c_get(api, params, config);
 			};
 
 			this.siteAll = function(params, config) {

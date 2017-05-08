@@ -3,7 +3,7 @@ angular.module('modaowang')
 	.directive('onOtherFalse', ['$rootElement', '$rootScope', function($rootElement, $rootScope) {
 		var isChild = function(parent, child) {
 			if(angular.isElement(child)) {
-				if(angular.equals(parent, child)) {
+				if(parent.id==child.id&&parent.className==child.className&&parent.tagName==child.tagName) {
 					return true;
 				}
 				if(!angular.equals($rootElement[0], child)) {
