@@ -2,9 +2,9 @@
 angular.module('modaowang')
 	.service('appConfig', ['$rootScope', function($rootScope) {
 		var appConfig = {
-			host: 'localhost',
+			//host: 'localhost',
 			//host: '120.24.92.233',
-			//host: 'mdwhat.com',
+			host: 'mdwhat.com',
 			port: '80',
 			appId:'mdwhat.com'
 		};
@@ -216,7 +216,7 @@ angular.module('modaowang')
 			]);
 
 			//请求拦截器和过滤器
-			$locationProvider.html5Mode(true);
+			//$locationProvider.html5Mode(true);
 			$httpProvider.interceptors.push('httpInterceptor');
 
 			$sceDelegateProvider.resourceUrlWhitelist([
